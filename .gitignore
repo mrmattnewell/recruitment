@@ -1,0 +1,10 @@
+build
+.DS_Store
+.idea
+Pods
+Podfile.lock
+*.dSYM.zip
+*.ipa
+DerivedData/
+fastlane/report.xml
+Preview.html
