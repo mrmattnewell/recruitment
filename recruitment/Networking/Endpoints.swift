@@ -10,5 +10,8 @@ import Foundation
 
 
 class Endpoints {
-    static let login = "https://eu.atlas.irisconnect.com:443/v1/mobile/login"
+    static let mobileApiKey = "mobileehHFHIhJEVoDOmurlRvxVFlw"
+    static let host = "https://eu.atlas.irisconnect.com:443"
+    static let login = "\(host)/v1/mobile/login"
+    static let jobs = "\(host)/v1/groups"
 }

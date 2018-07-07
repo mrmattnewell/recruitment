@@ -14,7 +14,7 @@ import UIKit
 class IrisApi {
     
     func login(login: LoginRequest, callbackOk: @escaping (_ response: LoginResponse) -> Void) {
-        Alamofire.request(Endpoints.login, method: .post, parameters: login.dictionary, encoding: JSONEncoding.default, headers: nil).responseData { (response) in
+        Alamofire.request(Endpoints.login, method: .post, parameters: login.dictionary, encoding: JSONEncoding.default, headers: mobileApiKeyHeader).responseData { (response) in
             guard self.isOk(response: response.response) else { return }
             if let json = response.result.value {
                 do{
@@ -23,6 +23,27 @@ class IrisApi {
                 }catch { }
             }
         }
+    }
+    
+    func getJobs(jobRequest: JobsRequest, user: User, callbackOk: @escaping (_ response: [JobsResponse]) -> Void) {
+        Alamofire.request(Endpoints.jobs, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: self.authenticationHeader(user: user)).responseData { (response) in
+            guard self.isOk(response: response.response) else { return }
+            if let json = response.result.value {
+                do{
+                    let res = try JSONDecoder().decode([JobsResponse].self, from: json)
+                    callbackOk(res)
+                }catch { }
+            }
+        }
+    }
+    
+    var mobileApiKeyHeader: [String: String] {
+        return ["x-atlas-mobile-api-key": Endpoints.mobileApiKey]
+    }
+    
+    func authenticationHeader(user: User) -> [String: String]? {
+        guard let key = user.authenticationKey else { return nil }
+        return ["x-atlas-mobile-api-key": Endpoints.mobileApiKey, "Authorization": key]
     }
     
     func isOk(response: HTTPURLResponse?) -> Bool {
@@ -40,3 +61,5 @@ extension Encodable {
         return (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)).flatMap { $0 as? [String: Any] }
     }
 }
+
+

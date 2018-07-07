@@ -8,9 +8,10 @@
 
 import Foundation
 import UIKit
+import NVActivityIndicatorView
 
 
-class LoginViewController: UIViewController, LoginView {
+class LoginViewController: UIViewController, LoginView, NVActivityIndicatorViewable {
     var presenter: LoginPresenter!
     
     @IBOutlet weak var txtPassword: LeftViewTextField!
@@ -28,13 +29,21 @@ class LoginViewController: UIViewController, LoginView {
     
     // MARK: LoginView
     func loginOk() {
-        
+        stopAnimating()
+        let storyBoard = UIStoryboard(name: "JobsStoryboard", bundle: nil)
+        let jobsController = storyBoard.instantiateViewController(withIdentifier: "JobListViewController")
+        jobsController.modalTransitionStyle = .coverVertical
+        self.show(jobsController, sender: self)
     }
     
     
     @IBAction func tappedLogin(_ sender: Any) {
+        
         guard let username = txtUser.text, let password = txtPassword.text else { return }
+        startAnimating(CGSize(width: 50, height: 50), message: nil, type: .ballGridPulse, color: .white, padding: 0)
         self.presenter.login(username: username, password: password)
+        txtPassword.resignFirstResponder()
+        txtUser.resignFirstResponder()
     }
 }
 

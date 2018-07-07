@@ -14,6 +14,24 @@
 		6E0D8AFF20EE7776006C7C33 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8AFE20EE7776006C7C33 /* LoginResponse.swift */; };
 		6E0D8B0120EE79D1006C7C33 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B0020EE79D1006C7C33 /* LoginPresenter.swift */; };
 		6E0D8B0320EE7AD4006C7C33 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B0220EE7AD4006C7C33 /* LoginInteractor.swift */; };
+		6E0D8B0620EEAF48006C7C33 /* JobListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B0520EEAF48006C7C33 /* JobListViewController.swift */; };
+		6E0D8B0820EEAF59006C7C33 /* JobListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B0720EEAF59006C7C33 /* JobListPresenter.swift */; };
+		6E0D8B0A20EEAF67006C7C33 /* JobListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B0920EEAF67006C7C33 /* JobListInteractor.swift */; };
+		6E0D8B0C20EEAFF9006C7C33 /* JobsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D8B0B20EEAFF9006C7C33 /* JobsStoryboard.storyboard */; };
+		6E0D8B0E20EECA80006C7C33 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B0D20EECA80006C7C33 /* Job.swift */; };
+		6E0D8B1020EECBFD006C7C33 /* JobListCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B0F20EECBFD006C7C33 /* JobListCollectionCell.swift */; };
+		6E0D8B1320EECE05006C7C33 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B1220EECE05006C7C33 /* Reusable.swift */; };
+		6E0D8B1520EECE4B006C7C33 /* NibExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B1420EECE4B006C7C33 /* NibExtension.swift */; };
+		6E0D8B1920EED009006C7C33 /* JobsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B1820EED009006C7C33 /* JobsRequest.swift */; };
+		6E0D8B1B20EED026006C7C33 /* JobsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B1A20EED026006C7C33 /* JobsResponse.swift */; };
+		6E0D8B1D20EED0FD006C7C33 /* LoginErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B1C20EED0FC006C7C33 /* LoginErrorResponse.swift */; };
+		6E0D8B1F20EFA78F006C7C33 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B1E20EFA78F006C7C33 /* User.swift */; };
+		6E0D8B2220EFCEEB006C7C33 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B2120EFCEEB006C7C33 /* SessionManager.swift */; };
+		6E0D8B2420EFCFFF006C7C33 /* LoginResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B2320EFCFFF006C7C33 /* LoginResponseExtension.swift */; };
+		6E0D8B2620EFD0CB006C7C33 /* JobsResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B2520EFD0CB006C7C33 /* JobsResponseExtension.swift */; };
+		6E0D8B2920F0AC32006C7C33 /* JobDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B2820F0AC32006C7C33 /* JobDescriptionViewController.swift */; };
+		6E0D8B2B20F0B197006C7C33 /* JobDescriptionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B2A20F0B197006C7C33 /* JobDescriptionPresenter.swift */; };
+		6E0D8B2D20F0B1BF006C7C33 /* JobDescriptionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B2C20F0B1BF006C7C33 /* JobDescriptionInteractor.swift */; };
 		6E44192120DA53600030BC4C /* LeftViewTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44192020DA53600030BC4C /* LeftViewTextField.swift */; };
 		6E44192520DA53DB0030BC4C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E44192420DA53DB0030BC4C /* Login.storyboard */; };
 		6E44192720DA553F0030BC4C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44192620DA553F0030BC4C /* LoginViewController.swift */; };
@@ -56,6 +74,24 @@
 		6E0D8AFE20EE7776006C7C33 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		6E0D8B0020EE79D1006C7C33 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		6E0D8B0220EE7AD4006C7C33 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		6E0D8B0520EEAF48006C7C33 /* JobListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListViewController.swift; sourceTree = "<group>"; };
+		6E0D8B0720EEAF59006C7C33 /* JobListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListPresenter.swift; sourceTree = "<group>"; };
+		6E0D8B0920EEAF67006C7C33 /* JobListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListInteractor.swift; sourceTree = "<group>"; };
+		6E0D8B0B20EEAFF9006C7C33 /* JobsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JobsStoryboard.storyboard; sourceTree = "<group>"; };
+		6E0D8B0D20EECA80006C7C33 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		6E0D8B0F20EECBFD006C7C33 /* JobListCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListCollectionCell.swift; sourceTree = "<group>"; };
+		6E0D8B1220EECE05006C7C33 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		6E0D8B1420EECE4B006C7C33 /* NibExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibExtension.swift; sourceTree = "<group>"; };
+		6E0D8B1820EED009006C7C33 /* JobsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsRequest.swift; sourceTree = "<group>"; };
+		6E0D8B1A20EED026006C7C33 /* JobsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsResponse.swift; sourceTree = "<group>"; };
+		6E0D8B1C20EED0FC006C7C33 /* LoginErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginErrorResponse.swift; sourceTree = "<group>"; };
+		6E0D8B1E20EFA78F006C7C33 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6E0D8B2120EFCEEB006C7C33 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		6E0D8B2320EFCFFF006C7C33 /* LoginResponseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseExtension.swift; sourceTree = "<group>"; };
+		6E0D8B2520EFD0CB006C7C33 /* JobsResponseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsResponseExtension.swift; sourceTree = "<group>"; };
+		6E0D8B2820F0AC32006C7C33 /* JobDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDescriptionViewController.swift; sourceTree = "<group>"; };
+		6E0D8B2A20F0B197006C7C33 /* JobDescriptionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDescriptionPresenter.swift; sourceTree = "<group>"; };
+		6E0D8B2C20F0B1BF006C7C33 /* JobDescriptionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDescriptionInteractor.swift; sourceTree = "<group>"; };
 		6E44192020DA53600030BC4C /* LeftViewTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewTextField.swift; sourceTree = "<group>"; };
 		6E44192420DA53DB0030BC4C /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		6E44192620DA553F0030BC4C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -133,8 +169,8 @@
 		6E0D8AF620EE7018006C7C33 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				6E0D8AFA20EE74A3006C7C33 /* LoginRequest.swift */,
-				6E0D8AFE20EE7776006C7C33 /* LoginResponse.swift */,
+				6E0D8B1620EECFEE006C7C33 /* Requests */,
+				6E0D8B1720EECFEE006C7C33 /* Responses */,
 				6E0D8AF720EE705E006C7C33 /* IrisApi.swift */,
 				6E0D8AFC20EE7680006C7C33 /* Endpoints.swift */,
 			);
@@ -144,8 +180,70 @@
 		6E0D8AF920EE7496006C7C33 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6E0D8B0D20EECA80006C7C33 /* Job.swift */,
+				6E0D8B1E20EFA78F006C7C33 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		6E0D8B0420EEAF37006C7C33 /* JobList */ = {
+			isa = PBXGroup;
+			children = (
+				6E0D8B0520EEAF48006C7C33 /* JobListViewController.swift */,
+				6E0D8B0720EEAF59006C7C33 /* JobListPresenter.swift */,
+				6E0D8B0920EEAF67006C7C33 /* JobListInteractor.swift */,
+				6E0D8B0B20EEAFF9006C7C33 /* JobsStoryboard.storyboard */,
+				6E0D8B0F20EECBFD006C7C33 /* JobListCollectionCell.swift */,
+			);
+			path = JobList;
+			sourceTree = "<group>";
+		};
+		6E0D8B1120EECDFA006C7C33 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6E0D8B1220EECE05006C7C33 /* Reusable.swift */,
+				6E0D8B1420EECE4B006C7C33 /* NibExtension.swift */,
+				6E0D8B2320EFCFFF006C7C33 /* LoginResponseExtension.swift */,
+				6E0D8B2520EFD0CB006C7C33 /* JobsResponseExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6E0D8B1620EECFEE006C7C33 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				6E0D8AFA20EE74A3006C7C33 /* LoginRequest.swift */,
+				6E0D8B1820EED009006C7C33 /* JobsRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		6E0D8B1720EECFEE006C7C33 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				6E0D8AFE20EE7776006C7C33 /* LoginResponse.swift */,
+				6E0D8B1A20EED026006C7C33 /* JobsResponse.swift */,
+				6E0D8B1C20EED0FC006C7C33 /* LoginErrorResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		6E0D8B2020EFCEDD006C7C33 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				6E0D8B2120EFCEEB006C7C33 /* SessionManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		6E0D8B2720F0AC21006C7C33 /* JobDescription */ = {
+			isa = PBXGroup;
+			children = (
+				6E0D8B2820F0AC32006C7C33 /* JobDescriptionViewController.swift */,
+				6E0D8B2A20F0B197006C7C33 /* JobDescriptionPresenter.swift */,
+				6E0D8B2C20F0B1BF006C7C33 /* JobDescriptionInteractor.swift */,
+			);
+			path = JobDescription;
 			sourceTree = "<group>";
 		};
 		6E44191F20DA53600030BC4C /* Views */ = {
@@ -159,6 +257,8 @@
 		6E44192220DA53B60030BC4C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				6E0D8B2720F0AC21006C7C33 /* JobDescription */,
+				6E0D8B0420EEAF37006C7C33 /* JobList */,
 				6E44192320DA53D10030BC4C /* Login */,
 			);
 			path = Scenes;
@@ -200,6 +300,8 @@
 		6ECF090D20D96D4E002227B2 /* recruitment */ = {
 			isa = PBXGroup;
 			children = (
+				6E0D8B2020EFCEDD006C7C33 /* Managers */,
+				6E0D8B1120EECDFA006C7C33 /* Extensions */,
 				6E0D8AF920EE7496006C7C33 /* Model */,
 				6E0D8AF620EE7018006C7C33 /* Networking */,
 				6E44192220DA53B60030BC4C /* Scenes */,
@@ -341,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E44192520DA53DB0030BC4C /* Login.storyboard in Resources */,
+				6E0D8B0C20EEAFF9006C7C33 /* JobsStoryboard.storyboard in Resources */,
 				6ECF091920D96D51002227B2 /* LaunchScreen.storyboard in Resources */,
 				6ECF091620D96D51002227B2 /* Assets.xcassets in Resources */,
 				6ECF091420D96D4E002227B2 /* Main.storyboard in Resources */,
@@ -408,10 +511,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-recruitment/Pods-recruitment-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -443,16 +548,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E0D8B0820EEAF59006C7C33 /* JobListPresenter.swift in Sources */,
+				6E0D8B1920EED009006C7C33 /* JobsRequest.swift in Sources */,
 				6E0D8AF820EE705E006C7C33 /* IrisApi.swift in Sources */,
+				6E0D8B2920F0AC32006C7C33 /* JobDescriptionViewController.swift in Sources */,
 				6E44192720DA553F0030BC4C /* LoginViewController.swift in Sources */,
 				6E0D8B0320EE7AD4006C7C33 /* LoginInteractor.swift in Sources */,
+				6E0D8B2420EFCFFF006C7C33 /* LoginResponseExtension.swift in Sources */,
 				6E0D8AFB20EE74A3006C7C33 /* LoginRequest.swift in Sources */,
+				6E0D8B0E20EECA80006C7C33 /* Job.swift in Sources */,
+				6E0D8B2B20F0B197006C7C33 /* JobDescriptionPresenter.swift in Sources */,
+				6E0D8B2620EFD0CB006C7C33 /* JobsResponseExtension.swift in Sources */,
 				6E0D8B0120EE79D1006C7C33 /* LoginPresenter.swift in Sources */,
 				6E0D8AFD20EE7680006C7C33 /* Endpoints.swift in Sources */,
 				6E44192120DA53600030BC4C /* LeftViewTextField.swift in Sources */,
+				6E0D8B2220EFCEEB006C7C33 /* SessionManager.swift in Sources */,
+				6E0D8B0620EEAF48006C7C33 /* JobListViewController.swift in Sources */,
 				6ECF091120D96D4E002227B2 /* ViewController.swift in Sources */,
+				6E0D8B2D20F0B1BF006C7C33 /* JobDescriptionInteractor.swift in Sources */,
 				6E0D8AFF20EE7776006C7C33 /* LoginResponse.swift in Sources */,
+				6E0D8B1320EECE05006C7C33 /* Reusable.swift in Sources */,
+				6E0D8B1020EECBFD006C7C33 /* JobListCollectionCell.swift in Sources */,
+				6E0D8B1520EECE4B006C7C33 /* NibExtension.swift in Sources */,
+				6E0D8B1B20EED026006C7C33 /* JobsResponse.swift in Sources */,
+				6E0D8B1D20EED0FD006C7C33 /* LoginErrorResponse.swift in Sources */,
+				6E0D8B0A20EEAF67006C7C33 /* JobListInteractor.swift in Sources */,
 				6ECF090F20D96D4E002227B2 /* AppDelegate.swift in Sources */,
+				6E0D8B1F20EFA78F006C7C33 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

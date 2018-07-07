@@ -65,7 +65,7 @@
                                                         <rect key="frame" x="0.0" y="52" width="335" height="50"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
                                                     </textField>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgr-I2-kgf">
                                                         <rect key="frame" x="0.0" y="102" width="335" height="1"/>
@@ -90,11 +90,6 @@
                                                     <action selector="tappedLogin:" destination="hgx-7A-AId" eventType="touchUpInside" id="8Di-G9-qrE"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raI-0V-ZMD">
-                                                <rect key="frame" x="155" y="428" width="64" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <state key="normal" title="Sign Up"/>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nho-x2-SrW">
                                                 <rect key="frame" x="125.5" y="620" width="124" height="27"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -114,11 +109,9 @@
                                             <constraint firstItem="dkT-Fb-DLe" firstAttribute="trailing" secondItem="5TK-mI-Wxc" secondAttribute="trailing" id="DHo-IO-FHG"/>
                                             <constraint firstItem="5TK-mI-Wxc" firstAttribute="centerX" secondItem="SVz-Rz-cBb" secondAttribute="centerX" id="Gax-XF-mhV"/>
                                             <constraint firstItem="5TK-mI-Wxc" firstAttribute="top" secondItem="4yP-Kc-HaX" secondAttribute="bottom" constant="46" id="OgY-eg-SUf"/>
-                                            <constraint firstItem="raI-0V-ZMD" firstAttribute="top" secondItem="xD3-Ax-hIF" secondAttribute="bottom" constant="24" id="Pxs-8G-gjn"/>
                                             <constraint firstItem="xD3-Ax-hIF" firstAttribute="centerX" secondItem="SVz-Rz-cBb" secondAttribute="centerX" id="R4u-uR-YXe"/>
                                             <constraint firstAttribute="bottom" secondItem="Nho-x2-SrW" secondAttribute="bottom" constant="20" id="Txu-UG-QWu"/>
                                             <constraint firstItem="4yP-Kc-HaX" firstAttribute="top" secondItem="SVz-Rz-cBb" secondAttribute="top" constant="90" id="XDI-71-Kwe"/>
-                                            <constraint firstItem="raI-0V-ZMD" firstAttribute="centerX" secondItem="SVz-Rz-cBb" secondAttribute="centerX" id="h4N-ri-KFG"/>
                                             <constraint firstItem="5TK-mI-Wxc" firstAttribute="leading" secondItem="SVz-Rz-cBb" secondAttribute="leading" constant="20" id="le3-Sf-jd9"/>
                                             <constraint firstItem="dkT-Fb-DLe" firstAttribute="top" secondItem="5TK-mI-Wxc" secondAttribute="bottom" constant="4" id="pRz-Ms-xkE"/>
                                         </constraints>
