@@ -27,7 +27,13 @@ class JobDescriptionPresenter {
         view.setJob(job: job)
     }
     
+    func gotVideo(url: URL) {
+        self.job.video?.endDate = Date()
+        interactor.createReflection(videoURL: url, job: self.job)
+    }
+    
     func uploadTapped(){
+        interactor.addVideo(job: self.job)
         view.openPicker()
     }
 

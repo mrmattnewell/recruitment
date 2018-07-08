@@ -10,6 +10,7 @@ target 'recruitment' do
   
   pod 'Alamofire', '~> 4.7'
   pod 'NVActivityIndicatorView'
+  pod 'AWSS3', '2.6.23'
 
   target 'recruitmentTests' do
     inherit! :search_paths

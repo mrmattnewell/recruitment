@@ -25,12 +25,27 @@ class IrisApi {
         }
     }
     
-    func getJobs(jobRequest: JobsRequest, user: User, callbackOk: @escaping (_ response: [JobsResponse]) -> Void) {
+    func getJobs(jobRequest: JobsRequest, user: User?, callbackOk: @escaping (_ response: [JobsResponse]) -> Void) {
+        guard let user = user else { return }
         Alamofire.request(Endpoints.jobs, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: self.authenticationHeader(user: user)).responseData { (response) in
             guard self.isOk(response: response.response) else { return }
             if let json = response.result.value {
                 do{
                     let res = try JSONDecoder().decode([JobsResponse].self, from: json)
+                    callbackOk(res)
+                }catch { }
+            }
+        }
+    }
+    
+    
+    func createReflection(creationRequest: CreateReflectionRequest, user: User?, callbackOk: @escaping (_ response: CreateReflectionResponse) -> Void) {
+        guard let user = user else { return }
+        Alamofire.request(Endpoints.createReflection, method: .post, parameters: creationRequest.dictionary, encoding: URLEncoding.httpBody, headers: self.authenticationHeader(user: user)).responseData { (response) in
+            guard self.isOk(response: response.response) else { return }
+            if let json = response.result.value {
+                do{
+                    let res = try JSONDecoder().decode(CreateReflectionResponse.self, from: json)
                     callbackOk(res)
                 }catch { }
             }

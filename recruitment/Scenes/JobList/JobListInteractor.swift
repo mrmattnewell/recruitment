@@ -16,9 +16,8 @@ class JobListInteractorImpl: JobListInteractor {
     
     
     func getJobs(onOk: @escaping ([Job]) -> Void) {
-        guard let user = sessionManager.user else { return }
         let request = JobsRequest()
-        irisApi.getJobs(jobRequest: request, user: user) { (jobsResponse) in
+        irisApi.getJobs(jobRequest: request, user: sessionManager.user) { (jobsResponse) in
             onOk(jobsResponse.map { $0.job() })
         }
     }

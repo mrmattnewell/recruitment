@@ -32,6 +32,9 @@
 		6E0D8B2920F0AC32006C7C33 /* JobDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B2820F0AC32006C7C33 /* JobDescriptionViewController.swift */; };
 		6E0D8B2B20F0B197006C7C33 /* JobDescriptionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B2A20F0B197006C7C33 /* JobDescriptionPresenter.swift */; };
 		6E0D8B2D20F0B1BF006C7C33 /* JobDescriptionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B2C20F0B1BF006C7C33 /* JobDescriptionInteractor.swift */; };
+		6E0D8B2F20F20568006C7C33 /* CreateReflectionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B2E20F20568006C7C33 /* CreateReflectionRequest.swift */; };
+		6E0D8B3120F208A8006C7C33 /* CreateReflectionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B3020F208A8006C7C33 /* CreateReflectionResponse.swift */; };
+		6E0D8B3320F2ABCE006C7C33 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B3220F2ABCE006C7C33 /* Video.swift */; };
 		6E44192120DA53600030BC4C /* LeftViewTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44192020DA53600030BC4C /* LeftViewTextField.swift */; };
 		6E44192520DA53DB0030BC4C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E44192420DA53DB0030BC4C /* Login.storyboard */; };
 		6E44192720DA553F0030BC4C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44192620DA553F0030BC4C /* LoginViewController.swift */; };
@@ -92,6 +95,9 @@
 		6E0D8B2820F0AC32006C7C33 /* JobDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDescriptionViewController.swift; sourceTree = "<group>"; };
 		6E0D8B2A20F0B197006C7C33 /* JobDescriptionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDescriptionPresenter.swift; sourceTree = "<group>"; };
 		6E0D8B2C20F0B1BF006C7C33 /* JobDescriptionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDescriptionInteractor.swift; sourceTree = "<group>"; };
+		6E0D8B2E20F20568006C7C33 /* CreateReflectionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReflectionRequest.swift; sourceTree = "<group>"; };
+		6E0D8B3020F208A8006C7C33 /* CreateReflectionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReflectionResponse.swift; sourceTree = "<group>"; };
+		6E0D8B3220F2ABCE006C7C33 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		6E44192020DA53600030BC4C /* LeftViewTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewTextField.swift; sourceTree = "<group>"; };
 		6E44192420DA53DB0030BC4C /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		6E44192620DA553F0030BC4C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +188,7 @@
 			children = (
 				6E0D8B0D20EECA80006C7C33 /* Job.swift */,
 				6E0D8B1E20EFA78F006C7C33 /* User.swift */,
+				6E0D8B3220F2ABCE006C7C33 /* Video.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,6 +221,7 @@
 			children = (
 				6E0D8AFA20EE74A3006C7C33 /* LoginRequest.swift */,
 				6E0D8B1820EED009006C7C33 /* JobsRequest.swift */,
+				6E0D8B2E20F20568006C7C33 /* CreateReflectionRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -224,6 +232,7 @@
 				6E0D8AFE20EE7776006C7C33 /* LoginResponse.swift */,
 				6E0D8B1A20EED026006C7C33 /* JobsResponse.swift */,
 				6E0D8B1C20EED0FC006C7C33 /* LoginErrorResponse.swift */,
+				6E0D8B3020F208A8006C7C33 /* CreateReflectionResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -510,11 +519,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-recruitment/Pods-recruitment-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSS3/AWSS3.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSS3.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 			);
@@ -554,6 +567,7 @@
 				6E0D8B2920F0AC32006C7C33 /* JobDescriptionViewController.swift in Sources */,
 				6E44192720DA553F0030BC4C /* LoginViewController.swift in Sources */,
 				6E0D8B0320EE7AD4006C7C33 /* LoginInteractor.swift in Sources */,
+				6E0D8B2F20F20568006C7C33 /* CreateReflectionRequest.swift in Sources */,
 				6E0D8B2420EFCFFF006C7C33 /* LoginResponseExtension.swift in Sources */,
 				6E0D8AFB20EE74A3006C7C33 /* LoginRequest.swift in Sources */,
 				6E0D8B0E20EECA80006C7C33 /* Job.swift in Sources */,
@@ -562,9 +576,11 @@
 				6E0D8B0120EE79D1006C7C33 /* LoginPresenter.swift in Sources */,
 				6E0D8AFD20EE7680006C7C33 /* Endpoints.swift in Sources */,
 				6E44192120DA53600030BC4C /* LeftViewTextField.swift in Sources */,
+				6E0D8B3120F208A8006C7C33 /* CreateReflectionResponse.swift in Sources */,
 				6E0D8B2220EFCEEB006C7C33 /* SessionManager.swift in Sources */,
 				6E0D8B0620EEAF48006C7C33 /* JobListViewController.swift in Sources */,
 				6ECF091120D96D4E002227B2 /* ViewController.swift in Sources */,
+				6E0D8B3320F2ABCE006C7C33 /* Video.swift in Sources */,
 				6E0D8B2D20F0B1BF006C7C33 /* JobDescriptionInteractor.swift in Sources */,
 				6E0D8AFF20EE7776006C7C33 /* LoginResponse.swift in Sources */,
 				6E0D8B1320EECE05006C7C33 /* Reusable.swift in Sources */,

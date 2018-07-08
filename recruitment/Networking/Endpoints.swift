@@ -14,4 +14,5 @@ class Endpoints {
     static let host = "https://eu.atlas.irisconnect.com:443"
     static let login = "\(host)/v1/mobile/login"
     static let jobs = "\(host)/v1/groups"
+    static let createReflection = "\(host)/v1/mobile/reflections"
 }

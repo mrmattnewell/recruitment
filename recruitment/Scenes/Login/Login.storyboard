@@ -45,7 +45,7 @@
                                                             <constraint firstAttribute="height" constant="0.5" id="qbk-TQ-jXA"/>
                                                         </constraints>
                                                     </view>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sMm-CU-pPm" customClass="LeftViewTextField" customModule="recruitment" customModuleProvider="target">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="pablo" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sMm-CU-pPm" customClass="LeftViewTextField" customModule="recruitment" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="1" width="335" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="1pW-D4-r1x"/>
@@ -61,7 +61,7 @@
                                                             <constraint firstAttribute="height" constant="0.5" id="lXb-uV-bo7"/>
                                                         </constraints>
                                                     </view>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F1N-Zc-GDw" customClass="LeftViewTextField" customModule="recruitment" customModuleProvider="target">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test1234=" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F1N-Zc-GDw" customClass="LeftViewTextField" customModule="recruitment" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="52" width="335" height="50"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>

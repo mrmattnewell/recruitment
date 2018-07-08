@@ -9,6 +9,11 @@
 import Foundation
 
 
-struct Job {
+class Job {
     let title: String
+    var video: Video?
+    
+    init(title: String) {
+        self.title = title
+    }
 }

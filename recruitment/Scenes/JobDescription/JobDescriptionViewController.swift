@@ -85,6 +85,11 @@ class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImag
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let url = info[UIImagePickerControllerMediaURL] as? URL {
+            presenter.gotVideo(url: url)
+        }
+        
+        dismiss(animated: true, completion: nil)
     }
     
 }
