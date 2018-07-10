@@ -11,4 +11,10 @@ import Foundation
 
 struct CreateReflectionResponse: Codable {
     
+    let reflection: ReflectionResponse
+    
+    struct ReflectionResponse: Codable {
+        let name: String
+        let id: Int
+    }
 }

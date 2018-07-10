@@ -27,7 +27,7 @@ class IrisApi {
     
     func getJobs(jobRequest: JobsRequest, user: User?, callbackOk: @escaping (_ response: [JobsResponse]) -> Void) {
         guard let user = user else { return }
-        Alamofire.request(Endpoints.jobs, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: self.authenticationHeader(user: user)).responseData { (response) in
+        Alamofire.request(Endpoints.jobs, method: .get, parameters: jobRequest.dictionary, encoding: JSONEncoding.default, headers: self.authenticationHeader(user: user)).responseData { (response) in
             guard self.isOk(response: response.response) else { return }
             if let json = response.result.value {
                 do{
@@ -41,7 +41,10 @@ class IrisApi {
     
     func createReflection(creationRequest: CreateReflectionRequest, user: User?, callbackOk: @escaping (_ response: CreateReflectionResponse) -> Void) {
         guard let user = user else { return }
-        Alamofire.request(Endpoints.createReflection, method: .post, parameters: creationRequest.dictionary, encoding: URLEncoding.httpBody, headers: self.authenticationHeader(user: user)).responseData { (response) in
+        let params = creationRequest.dictionary!.compactMap( { (key, value) -> String? in
+            "\(key)=\(value)"
+        }).joined(separator: "&")
+        Alamofire.request(Endpoints.createReflection, method: .post, parameters: [:], encoding: params, headers: self.authenticationHeader(user: user)).responseData { (response) in
             guard self.isOk(response: response.response) else { return }
             if let json = response.result.value {
                 do{
@@ -52,13 +55,29 @@ class IrisApi {
         }
     }
     
+    func authorize(jobRequest: AuthorizationRequest, user: User?, callbackOk: @escaping (_ response: AuthorizationResponse) -> Void) {
+        guard let user = user else { return }
+        Alamofire.request(Endpoints.authorization, method: .post, parameters: jobRequest.dictionary, encoding: JSONEncoding.default, headers: self.authenticationHeader(user: user)).responseData { (response) in
+            guard self.isOk(response: response.response) else { return }
+            if let json = response.result.value {
+                do{
+                    let res = try JSONDecoder().decode(AuthorizationResponse.self, from: json)
+                    callbackOk(res)
+                }catch { }
+            }
+        }
+    }
+    
+    
+    
     var mobileApiKeyHeader: [String: String] {
         return ["x-atlas-mobile-api-key": Endpoints.mobileApiKey]
     }
     
     func authenticationHeader(user: User) -> [String: String]? {
         guard let key = user.authenticationKey else { return nil }
-        return ["x-atlas-mobile-api-key": Endpoints.mobileApiKey, "Authorization": key]
+        return ["x-atlas-mobile-api-key": Endpoints.mobileApiKey, "Authorization": key,
+                "x-atlas-mobile-app-version": "3.7.7(825)"]
     }
     
     func isOk(response: HTTPURLResponse?) -> Bool {

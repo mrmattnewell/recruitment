@@ -9,7 +9,36 @@
 import Foundation
 
 
-struct Video {
+class Video {
     var startDate: Date?
     var endDate: Date?
+    var localPath: String?
+    var awsParams: AwsVideoParams?
+    
+    
+    struct AwsVideoParams {
+        var amazonAccessKey: String
+        var amazonSecretKey: String
+        var amazonTokenTemporary: String
+        var amazonBucket: String
+        var endpoint: String
+        var amazonObjectNamePrefix: String
+        var uploadKey: String
+    }
+}
+
+
+
+extension Video {
+    func paramsFrom(authorizationResponse: AuthorizationResponse) {
+        
+        let uploadKey = "\(authorizationResponse.upload.parameters.objectName)/1234567890_part_1.mov"
+        self.awsParams = AwsVideoParams(amazonAccessKey: authorizationResponse.upload.parameters.accessKey,
+                                        amazonSecretKey: authorizationResponse.upload.parameters.secretKey,
+                                        amazonTokenTemporary: authorizationResponse.upload.parameters.temporaryToken,
+                                        amazonBucket: authorizationResponse.upload.parameters.bucket,
+                                        endpoint: authorizationResponse.upload.parameters.endpoint,
+                                        amazonObjectNamePrefix: authorizationResponse.upload.parameters.objectName,
+                                        uploadKey: uploadKey)
+    }
 }

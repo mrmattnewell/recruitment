@@ -10,5 +10,5 @@ import Foundation
 
 
 struct JobsRequest: Codable {
-    
+    let search: String = "JOBGROUPd,"
 }

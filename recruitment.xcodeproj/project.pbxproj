@@ -38,6 +38,9 @@
 		6E44192120DA53600030BC4C /* LeftViewTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44192020DA53600030BC4C /* LeftViewTextField.swift */; };
 		6E44192520DA53DB0030BC4C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E44192420DA53DB0030BC4C /* Login.storyboard */; };
 		6E44192720DA553F0030BC4C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44192620DA553F0030BC4C /* LoginViewController.swift */; };
+		6E7F601B20F3DFC400C96E88 /* ParameterEncodingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7F601A20F3DFC400C96E88 /* ParameterEncodingExtension.swift */; };
+		6E7F601D20F3FFF500C96E88 /* AuthorizationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7F601C20F3FFF500C96E88 /* AuthorizationRequest.swift */; };
+		6E7F601F20F400D900C96E88 /* AuthorizationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7F601E20F400D900C96E88 /* AuthorizationResponse.swift */; };
 		6ECF090F20D96D4E002227B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECF090E20D96D4E002227B2 /* AppDelegate.swift */; };
 		6ECF091120D96D4E002227B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECF091020D96D4E002227B2 /* ViewController.swift */; };
 		6ECF091420D96D4E002227B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ECF091220D96D4E002227B2 /* Main.storyboard */; };
@@ -45,6 +48,8 @@
 		6ECF091920D96D51002227B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ECF091720D96D51002227B2 /* LaunchScreen.storyboard */; };
 		6ECF092420D96D51002227B2 /* recruitmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECF092320D96D51002227B2 /* recruitmentTests.swift */; };
 		6ECF092F20D96D51002227B2 /* recruitmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECF092E20D96D51002227B2 /* recruitmentUITests.swift */; };
+		6EFBDA5120F5256800DEDE43 /* AuthorizationResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFBDA5020F5256800DEDE43 /* AuthorizationResponseExtension.swift */; };
+		6EFBDA5320F52D5B00DEDE43 /* AWSRegionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFBDA5220F52D5B00DEDE43 /* AWSRegionExtension.swift */; };
 		7681A117C394FE5129C20088 /* Pods_recruitmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75D594F7420174E18EB9C92 /* Pods_recruitmentTests.framework */; };
 		CB40BC92991BEFF12029C459 /* Pods_recruitment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F053B10BD5C5767A4E92EC /* Pods_recruitment.framework */; };
 /* End PBXBuildFile section */
@@ -101,6 +106,9 @@
 		6E44192020DA53600030BC4C /* LeftViewTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewTextField.swift; sourceTree = "<group>"; };
 		6E44192420DA53DB0030BC4C /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		6E44192620DA553F0030BC4C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6E7F601A20F3DFC400C96E88 /* ParameterEncodingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncodingExtension.swift; sourceTree = "<group>"; };
+		6E7F601C20F3FFF500C96E88 /* AuthorizationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationRequest.swift; sourceTree = "<group>"; };
+		6E7F601E20F400D900C96E88 /* AuthorizationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationResponse.swift; sourceTree = "<group>"; };
 		6ECF090B20D96D4E002227B2 /* recruitment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = recruitment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ECF090E20D96D4E002227B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6ECF091020D96D4E002227B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +122,8 @@
 		6ECF092A20D96D51002227B2 /* recruitmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = recruitmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ECF092E20D96D51002227B2 /* recruitmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recruitmentUITests.swift; sourceTree = "<group>"; };
 		6ECF093020D96D51002227B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EFBDA5020F5256800DEDE43 /* AuthorizationResponseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationResponseExtension.swift; sourceTree = "<group>"; };
+		6EFBDA5220F52D5B00DEDE43 /* AWSRegionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSRegionExtension.swift; sourceTree = "<group>"; };
 		7383DC3B816F46142721187E /* Pods-recruitmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-recruitmentTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-recruitmentTests/Pods-recruitmentTests.release.xcconfig"; sourceTree = "<group>"; };
 		B75D594F7420174E18EB9C92 /* Pods_recruitmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_recruitmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D2235459A9E7603868E027 /* Pods_recruitmentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_recruitmentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +222,9 @@
 				6E0D8B1420EECE4B006C7C33 /* NibExtension.swift */,
 				6E0D8B2320EFCFFF006C7C33 /* LoginResponseExtension.swift */,
 				6E0D8B2520EFD0CB006C7C33 /* JobsResponseExtension.swift */,
+				6E7F601A20F3DFC400C96E88 /* ParameterEncodingExtension.swift */,
+				6EFBDA5020F5256800DEDE43 /* AuthorizationResponseExtension.swift */,
+				6EFBDA5220F52D5B00DEDE43 /* AWSRegionExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -222,6 +235,7 @@
 				6E0D8AFA20EE74A3006C7C33 /* LoginRequest.swift */,
 				6E0D8B1820EED009006C7C33 /* JobsRequest.swift */,
 				6E0D8B2E20F20568006C7C33 /* CreateReflectionRequest.swift */,
+				6E7F601C20F3FFF500C96E88 /* AuthorizationRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -233,6 +247,7 @@
 				6E0D8B1A20EED026006C7C33 /* JobsResponse.swift */,
 				6E0D8B1C20EED0FC006C7C33 /* LoginErrorResponse.swift */,
 				6E0D8B3020F208A8006C7C33 /* CreateReflectionResponse.swift */,
+				6E7F601E20F400D900C96E88 /* AuthorizationResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -567,6 +582,7 @@
 				6E0D8B2920F0AC32006C7C33 /* JobDescriptionViewController.swift in Sources */,
 				6E44192720DA553F0030BC4C /* LoginViewController.swift in Sources */,
 				6E0D8B0320EE7AD4006C7C33 /* LoginInteractor.swift in Sources */,
+				6EFBDA5120F5256800DEDE43 /* AuthorizationResponseExtension.swift in Sources */,
 				6E0D8B2F20F20568006C7C33 /* CreateReflectionRequest.swift in Sources */,
 				6E0D8B2420EFCFFF006C7C33 /* LoginResponseExtension.swift in Sources */,
 				6E0D8AFB20EE74A3006C7C33 /* LoginRequest.swift in Sources */,
@@ -576,8 +592,10 @@
 				6E0D8B0120EE79D1006C7C33 /* LoginPresenter.swift in Sources */,
 				6E0D8AFD20EE7680006C7C33 /* Endpoints.swift in Sources */,
 				6E44192120DA53600030BC4C /* LeftViewTextField.swift in Sources */,
+				6E7F601D20F3FFF500C96E88 /* AuthorizationRequest.swift in Sources */,
 				6E0D8B3120F208A8006C7C33 /* CreateReflectionResponse.swift in Sources */,
 				6E0D8B2220EFCEEB006C7C33 /* SessionManager.swift in Sources */,
+				6E7F601B20F3DFC400C96E88 /* ParameterEncodingExtension.swift in Sources */,
 				6E0D8B0620EEAF48006C7C33 /* JobListViewController.swift in Sources */,
 				6ECF091120D96D4E002227B2 /* ViewController.swift in Sources */,
 				6E0D8B3320F2ABCE006C7C33 /* Video.swift in Sources */,
@@ -590,7 +608,9 @@
 				6E0D8B1D20EED0FD006C7C33 /* LoginErrorResponse.swift in Sources */,
 				6E0D8B0A20EEAF67006C7C33 /* JobListInteractor.swift in Sources */,
 				6ECF090F20D96D4E002227B2 /* AppDelegate.swift in Sources */,
+				6EFBDA5320F52D5B00DEDE43 /* AWSRegionExtension.swift in Sources */,
 				6E0D8B1F20EFA78F006C7C33 /* User.swift in Sources */,
+				6E7F601F20F400D900C96E88 /* AuthorizationResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
