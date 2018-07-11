@@ -20,7 +20,7 @@ class JobListViewController: UIViewController, UICollectionViewDelegateFlowLayou
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = "Job List"
         //self.collectionView.register(JobListCollectionCell.self)
         setupPresenter()
         presenter.viewDidLoad()
@@ -30,6 +30,7 @@ class JobListViewController: UIViewController, UICollectionViewDelegateFlowLayou
         self.presenter = JobListPresenter(view: self)
         let interactor = JobListInteractorImpl()
         presenter.interactor = interactor
+        
     }
     
     func showJobs(jobs: [Job]) {

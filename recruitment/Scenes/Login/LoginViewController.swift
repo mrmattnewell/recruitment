@@ -33,7 +33,10 @@ class LoginViewController: UIViewController, LoginView, NVActivityIndicatorViewa
         let storyBoard = UIStoryboard(name: "JobsStoryboard", bundle: nil)
         let jobsController = storyBoard.instantiateViewController(withIdentifier: "JobListViewController")
         jobsController.modalTransitionStyle = .coverVertical
-        self.show(jobsController, sender: self)
+        let navigationController = UINavigationController(rootViewController: jobsController)
+        
+        //self.present(navigationController, animated: true, completion: nil)
+        self.show(navigationController, sender: self)
     }
     
     

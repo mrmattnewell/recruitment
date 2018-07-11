@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5A1114B319D3DDC561800C5A /* Pods_recruitmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D2235459A9E7603868E027 /* Pods_recruitmentUITests.framework */; };
+		6E05F31B20F61F87002D4C6B /* ConfirmationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E05F31A20F61F87002D4C6B /* ConfirmationRequest.swift */; };
+		6E05F31D20F62057002D4C6B /* ConfirmationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E05F31C20F62057002D4C6B /* ConfirmationResponse.swift */; };
+		6E05F32020F646A1002D4C6B /* ShareReflectionGroupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E05F31F20F646A1002D4C6B /* ShareReflectionGroupRequest.swift */; };
+		6E05F32220F646BD002D4C6B /* ShareReflectionGroupResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E05F32120F646BD002D4C6B /* ShareReflectionGroupResponse.swift */; };
 		6E0D8AF820EE705E006C7C33 /* IrisApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8AF720EE705E006C7C33 /* IrisApi.swift */; };
 		6E0D8AFB20EE74A3006C7C33 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8AFA20EE74A3006C7C33 /* LoginRequest.swift */; };
 		6E0D8AFD20EE7680006C7C33 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8AFC20EE7680006C7C33 /* Endpoints.swift */; };
@@ -76,6 +80,10 @@
 		1D398041A88BCEE9F4000EDC /* Pods-recruitment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-recruitment.release.xcconfig"; path = "Pods/Target Support Files/Pods-recruitment/Pods-recruitment.release.xcconfig"; sourceTree = "<group>"; };
 		37C524A5E9745F8A213B6C9E /* Pods-recruitment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-recruitment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-recruitment/Pods-recruitment.debug.xcconfig"; sourceTree = "<group>"; };
 		55BE6686099E0E24F2C4DB5F /* Pods-recruitmentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-recruitmentUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-recruitmentUITests/Pods-recruitmentUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6E05F31A20F61F87002D4C6B /* ConfirmationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationRequest.swift; sourceTree = "<group>"; };
+		6E05F31C20F62057002D4C6B /* ConfirmationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationResponse.swift; sourceTree = "<group>"; };
+		6E05F31F20F646A1002D4C6B /* ShareReflectionGroupRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareReflectionGroupRequest.swift; sourceTree = "<group>"; };
+		6E05F32120F646BD002D4C6B /* ShareReflectionGroupResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareReflectionGroupResponse.swift; sourceTree = "<group>"; };
 		6E0D8AF720EE705E006C7C33 /* IrisApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrisApi.swift; sourceTree = "<group>"; };
 		6E0D8AFA20EE74A3006C7C33 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		6E0D8AFC20EE7680006C7C33 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
@@ -236,6 +244,8 @@
 				6E0D8B1820EED009006C7C33 /* JobsRequest.swift */,
 				6E0D8B2E20F20568006C7C33 /* CreateReflectionRequest.swift */,
 				6E7F601C20F3FFF500C96E88 /* AuthorizationRequest.swift */,
+				6E05F31A20F61F87002D4C6B /* ConfirmationRequest.swift */,
+				6E05F31F20F646A1002D4C6B /* ShareReflectionGroupRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -248,6 +258,8 @@
 				6E0D8B1C20EED0FC006C7C33 /* LoginErrorResponse.swift */,
 				6E0D8B3020F208A8006C7C33 /* CreateReflectionResponse.swift */,
 				6E7F601E20F400D900C96E88 /* AuthorizationResponse.swift */,
+				6E05F31C20F62057002D4C6B /* ConfirmationResponse.swift */,
+				6E05F32120F646BD002D4C6B /* ShareReflectionGroupResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -370,6 +382,7 @@
 				6ECF090820D96D4E002227B2 /* Frameworks */,
 				6ECF090920D96D4E002227B2 /* Resources */,
 				88DB00DC01F4380F27916B6C /* [CP] Embed Pods Frameworks */,
+				6E05F31E20F630E8002D4C6B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -527,6 +540,19 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6E05F31E20F630E8002D4C6B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 6de6008e0e7fff237bba9937ee673f5baec10e01 2f2c91086ea178bb40ce842269ab13f0d3ba0426c5ddbc060b3756fd6ab0575a";
+		};
 		88DB00DC01F4380F27916B6C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -576,6 +602,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E05F32020F646A1002D4C6B /* ShareReflectionGroupRequest.swift in Sources */,
 				6E0D8B0820EEAF59006C7C33 /* JobListPresenter.swift in Sources */,
 				6E0D8B1920EED009006C7C33 /* JobsRequest.swift in Sources */,
 				6E0D8AF820EE705E006C7C33 /* IrisApi.swift in Sources */,
@@ -589,15 +616,18 @@
 				6E0D8B0E20EECA80006C7C33 /* Job.swift in Sources */,
 				6E0D8B2B20F0B197006C7C33 /* JobDescriptionPresenter.swift in Sources */,
 				6E0D8B2620EFD0CB006C7C33 /* JobsResponseExtension.swift in Sources */,
+				6E05F31D20F62057002D4C6B /* ConfirmationResponse.swift in Sources */,
 				6E0D8B0120EE79D1006C7C33 /* LoginPresenter.swift in Sources */,
 				6E0D8AFD20EE7680006C7C33 /* Endpoints.swift in Sources */,
 				6E44192120DA53600030BC4C /* LeftViewTextField.swift in Sources */,
 				6E7F601D20F3FFF500C96E88 /* AuthorizationRequest.swift in Sources */,
 				6E0D8B3120F208A8006C7C33 /* CreateReflectionResponse.swift in Sources */,
+				6E05F32220F646BD002D4C6B /* ShareReflectionGroupResponse.swift in Sources */,
 				6E0D8B2220EFCEEB006C7C33 /* SessionManager.swift in Sources */,
 				6E7F601B20F3DFC400C96E88 /* ParameterEncodingExtension.swift in Sources */,
 				6E0D8B0620EEAF48006C7C33 /* JobListViewController.swift in Sources */,
 				6ECF091120D96D4E002227B2 /* ViewController.swift in Sources */,
+				6E05F31B20F61F87002D4C6B /* ConfirmationRequest.swift in Sources */,
 				6E0D8B3320F2ABCE006C7C33 /* Video.swift in Sources */,
 				6E0D8B2D20F0B1BF006C7C33 /* JobDescriptionInteractor.swift in Sources */,
 				6E0D8AFF20EE7776006C7C33 /* LoginResponse.swift in Sources */,
@@ -784,6 +814,7 @@
 			baseConfigurationReference = 37C524A5E9745F8A213B6C9E /* Pods-recruitment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3Z233GLKUM;
 				INFOPLIST_FILE = recruitment/Info.plist;
@@ -793,6 +824,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.irisconnect.recruitment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -803,6 +835,7 @@
 			baseConfigurationReference = 1D398041A88BCEE9F4000EDC /* Pods-recruitment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3Z233GLKUM;
 				INFOPLIST_FILE = recruitment/Info.plist;
@@ -812,6 +845,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.irisconnect.recruitment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

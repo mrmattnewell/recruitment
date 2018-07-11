@@ -13,12 +13,13 @@ import MobileCoreServices
 
 class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    @IBOutlet weak var lblTitle: UILabel!
     var job: Job!
     var presenter: JobDescriptionPresenter!
     
     @IBOutlet weak var btnUpload: UIButton!
+    @IBOutlet weak var progressUpload: UIProgressView!
     
+    @IBOutlet weak var textDescription: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupPresenter()
@@ -29,6 +30,7 @@ class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImag
         self.presenter = JobDescriptionPresenter(view: self, controller: self, job: job)
         let interactor = JobDescriptionInteractorImpl()
         presenter.interactor = interactor
+        interactor.output = presenter
     }
     
     @IBAction func tappedUpload(_ sender: Any) {
@@ -39,7 +41,8 @@ class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImag
     // MARK: JobDescriptionView
     
     func setJob(job: Job) {
-        self.lblTitle.text = job.title
+        self.title = job.title
+        self.textDescription.text = job.description
     }
     
     func openPicker() {
@@ -83,6 +86,14 @@ class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImag
         self.present(imag, animated: true, completion: nil)
     }
     
+    func onUploadProgress(progress: Float) {
+        self.progressUpload.progress = progress
+    }
+    
+    func uploadProgress(show: Bool) {
+        progressUpload.isHidden = !show
+    }
+    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let url = info[UIImagePickerControllerMediaURL] as? URL {
@@ -99,4 +110,7 @@ class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImag
 protocol JobDescriptionView {
     func setJob(job: Job)
     func openPicker()
+    func onUploadProgress(progress: Float)
+    func uploadProgress(show: Bool)
+    
 }

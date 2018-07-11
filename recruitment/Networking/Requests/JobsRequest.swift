@@ -10,5 +10,11 @@ import Foundation
 
 
 struct JobsRequest: Codable {
-    let search: String = "JOBGROUPd,"
+    let search: String = "JOBGROUP,"
+    let perPage: Int = -1
+    
+    private enum CodingKeys: String, CodingKey {
+        case search
+        case perPage = "per_page" 
+    }
 }

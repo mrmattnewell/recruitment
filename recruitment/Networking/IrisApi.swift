@@ -27,7 +27,7 @@ class IrisApi {
     
     func getJobs(jobRequest: JobsRequest, user: User?, callbackOk: @escaping (_ response: [JobsResponse]) -> Void) {
         guard let user = user else { return }
-        Alamofire.request(Endpoints.jobs, method: .get, parameters: jobRequest.dictionary, encoding: JSONEncoding.default, headers: self.authenticationHeader(user: user)).responseData { (response) in
+        Alamofire.request(Endpoints.jobs, method: .get, parameters: jobRequest.dictionary, encoding: URLEncoding.queryString, headers: self.authenticationHeader(user: user)).responseData { (response) in
             guard self.isOk(response: response.response) else { return }
             if let json = response.result.value {
                 do{
@@ -68,6 +68,32 @@ class IrisApi {
         }
     }
     
+    func confirmation(confirmationRequest: ConfirmationRequest, user: User?, callbackOk: @escaping (_ response: ConfirmationResponse) -> Void) {
+        guard let user = user else { return }
+        Alamofire.request(Endpoints.confirmation, method: .post, parameters: confirmationRequest.dictionary, encoding: JSONEncoding.default, headers: self.authenticationHeader(user: user)).responseData { (response) in
+            guard self.isOk(response: response.response) else { return }
+            if let json = response.result.value {
+                do{
+                    let res = try JSONDecoder().decode(ConfirmationResponse.self, from: json)
+                    callbackOk(res)
+                }catch { }
+            }
+        }
+    }
+    
+    
+    func shareReflectionToGroup(shareRequest: ShareReflectionGroupRequest, user: User?, callbackOk: ((_ response: ShareReflectionGroupResponse) -> Void)?) {
+        guard let user = user else { return }
+        Alamofire.request(Endpoints.shareToGroup(reflectionId: shareRequest.reflectionId!), method: .post, parameters: shareRequest.dictionary, encoding: JSONEncoding.default, headers: self.authenticationHeader(user: user)).responseData { (response) in
+            guard self.isOk(response: response.response) else { return }
+            if let json = response.result.value {
+                do{
+                    let res = try JSONDecoder().decode(ShareReflectionGroupResponse.self, from: json)
+                    callbackOk?(res)
+                }catch { }
+            }
+        }
+    }
     
     
     var mobileApiKeyHeader: [String: String] {

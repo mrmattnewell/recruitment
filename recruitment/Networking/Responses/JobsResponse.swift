@@ -11,4 +11,6 @@ import Foundation
 
 struct JobsResponse: Codable {
     let name: String
+    let description: String
+    let id: Int
 }

@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Job List View Controller-->
+        <!--Job List-->
         <scene sceneID="Yfm-v6-tdK">
             <objects>
-                <viewController storyboardIdentifier="JobListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ckg-Ba-sqC" customClass="JobListViewController" customModule="recruitment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JobListViewController" title="Job List" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ckg-Ba-sqC" customClass="JobListViewController" customModule="recruitment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jAZ-uy-2B5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,6 +69,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zR6-r6-fgJ"/>
                     </view>
+                    <navigationItem key="navigationItem" id="2Nt-KB-pfe"/>
                     <connections>
                         <outlet property="collectionView" destination="VR2-Lu-lxp" id="SB2-3c-xfk"/>
                     </connections>
@@ -85,12 +86,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccF-aU-9zW">
-                                <rect key="frame" x="20" y="40" width="335" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T96-a3-PHf">
                                 <rect key="frame" x="262" y="617" width="93" height="30"/>
                                 <state key="normal" title="Upload Video"/>
@@ -98,20 +93,35 @@
                                     <action selector="tappedUpload:" destination="rXd-kC-21U" eventType="touchUpInside" id="xCC-zb-ub7"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MPl-bu-jhM">
+                                <rect key="frame" x="15" y="35" width="345" height="567"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GMi-yI-lgz">
+                                <rect key="frame" x="15" y="608" width="345" height="2"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="MPl-bu-jhM" firstAttribute="top" secondItem="akO-1o-VBO" secondAttribute="top" constant="15" id="1ct-UH-Vp3"/>
+                            <constraint firstItem="akO-1o-VBO" firstAttribute="trailing" secondItem="MPl-bu-jhM" secondAttribute="trailing" constant="15" id="1ls-iK-DKb"/>
                             <constraint firstItem="akO-1o-VBO" firstAttribute="trailing" secondItem="T96-a3-PHf" secondAttribute="trailing" constant="20" id="CFt-mU-CpH"/>
+                            <constraint firstItem="T96-a3-PHf" firstAttribute="top" secondItem="GMi-yI-lgz" secondAttribute="bottom" constant="7" id="HIZ-HJ-RfS"/>
                             <constraint firstItem="akO-1o-VBO" firstAttribute="bottom" secondItem="T96-a3-PHf" secondAttribute="bottom" constant="20" id="QjM-Kf-xfd"/>
-                            <constraint firstItem="ccF-aU-9zW" firstAttribute="leading" secondItem="akO-1o-VBO" secondAttribute="leading" constant="20" id="q8t-8e-xBC"/>
-                            <constraint firstItem="akO-1o-VBO" firstAttribute="trailing" secondItem="ccF-aU-9zW" secondAttribute="trailing" constant="20" id="qAv-kV-wLi"/>
-                            <constraint firstItem="ccF-aU-9zW" firstAttribute="top" secondItem="akO-1o-VBO" secondAttribute="top" constant="20" id="qib-Gd-P1I"/>
+                            <constraint firstAttribute="trailing" secondItem="GMi-yI-lgz" secondAttribute="trailing" constant="15" id="a4U-Sn-hx4"/>
+                            <constraint firstItem="MPl-bu-jhM" firstAttribute="leading" secondItem="akO-1o-VBO" secondAttribute="leading" constant="15" id="ddT-Ly-nP9"/>
+                            <constraint firstItem="GMi-yI-lgz" firstAttribute="leading" secondItem="Gbs-os-zQ4" secondAttribute="leading" constant="15" id="e8E-mx-xZQ"/>
+                            <constraint firstItem="T96-a3-PHf" firstAttribute="top" secondItem="MPl-bu-jhM" secondAttribute="bottom" constant="15" id="nrT-mq-Knq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="akO-1o-VBO"/>
                     </view>
                     <connections>
                         <outlet property="btnUpload" destination="T96-a3-PHf" id="JSg-qU-hgF"/>
-                        <outlet property="lblTitle" destination="ccF-aU-9zW" id="G7Y-PC-7hp"/>
+                        <outlet property="progressUpload" destination="GMi-yI-lgz" id="QA8-I6-4cm"/>
+                        <outlet property="textDescription" destination="MPl-bu-jhM" id="geJ-Jv-Lmo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCV-ar-9eL" userLabel="First Responder" sceneMemberID="firstResponder"/>

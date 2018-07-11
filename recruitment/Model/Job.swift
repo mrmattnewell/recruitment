@@ -11,9 +11,13 @@ import Foundation
 
 class Job {
     let title: String
+    let id: Int
+    let description: String
     var video: Video?
     
-    init(title: String) {
+    init(id: Int, title: String, description: String) {
         self.title = title
+        self.id = id
+        self.description = description
     }
 }

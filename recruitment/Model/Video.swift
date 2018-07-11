@@ -12,8 +12,9 @@ import Foundation
 class Video {
     var startDate: Date?
     var endDate: Date?
-    var localPath: String?
+    var localPath: URL?
     var awsParams: AwsVideoParams?
+    var vmk: String?
     
     
     struct AwsVideoParams {
@@ -31,7 +32,7 @@ class Video {
 
 extension Video {
     func paramsFrom(authorizationResponse: AuthorizationResponse) {
-        
+        self.vmk = authorizationResponse.upload.vmk
         let uploadKey = "\(authorizationResponse.upload.parameters.objectName)/1234567890_part_1.mov"
         self.awsParams = AwsVideoParams(amazonAccessKey: authorizationResponse.upload.parameters.accessKey,
                                         amazonSecretKey: authorizationResponse.upload.parameters.secretKey,

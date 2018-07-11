@@ -15,6 +15,7 @@ struct AuthorizationResponse: Codable {
     
     struct UploadResponse: Codable {
         let parameters: ParametersResponse
+        let vmk: String
         
         struct ParametersResponse: Codable {
             let objectName: String

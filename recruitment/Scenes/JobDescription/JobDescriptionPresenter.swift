@@ -9,7 +9,7 @@
 import Foundation
 
 
-class JobDescriptionPresenter {
+class JobDescriptionPresenter: JobDescriptionInteractorOut {
     
     var interactor: JobDescriptionInteractor!
     let controller: JobDescriptionViewController
@@ -25,9 +25,11 @@ class JobDescriptionPresenter {
     
     func viewDidLoad(){
         view.setJob(job: job)
+        view.uploadProgress(show: false)
     }
     
     func gotVideo(url: URL) {
+        view.uploadProgress(show: true)
         self.job.video?.endDate = Date()
         interactor.createReflection(videoURL: url, job: self.job)
     }
@@ -35,6 +37,18 @@ class JobDescriptionPresenter {
     func uploadTapped(){
         interactor.addVideo(job: self.job)
         view.openPicker()
+    }
+    
+    // MARK: JobDescriptionInteractorOut
+    
+    func onProgressUpload(progress: Float) {
+        DispatchQueue.main.async {
+            self.view.onUploadProgress(progress: progress / 100)
+        }
+    }
+    
+    func onUploadConfirmed() {
+        
     }
 
 }

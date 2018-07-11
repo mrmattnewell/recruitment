@@ -11,6 +11,8 @@ target 'recruitment' do
   pod 'Alamofire', '~> 4.7'
   pod 'NVActivityIndicatorView'
   pod 'AWSS3', '2.6.23'
+  pod 'Fabric'
+  pod 'Crashlytics'
 
   target 'recruitmentTests' do
     inherit! :search_paths
