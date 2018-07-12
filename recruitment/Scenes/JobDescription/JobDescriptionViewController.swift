@@ -16,6 +16,7 @@ class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImag
     var job: Job!
     var presenter: JobDescriptionPresenter!
     
+    @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var btnUpload: UIButton!
     @IBOutlet weak var progressUpload: UIProgressView!
     
@@ -24,6 +25,8 @@ class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImag
         super.viewDidLoad()
         setupPresenter()
         presenter.viewDidLoad()
+        self.btnUpload.roundedButton()
+        progressUpload.transform = progressUpload.transform.scaledBy(x: 1, y: 20)
     }
     
     func setupPresenter() {
@@ -43,6 +46,7 @@ class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImag
     func setJob(job: Job) {
         self.title = job.title
         self.textDescription.text = job.description
+        self.lblTitle.text = job.title
     }
     
     func openPicker() {
@@ -91,11 +95,17 @@ class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImag
     }
     
     func uploadProgress(show: Bool) {
-        progressUpload.isHidden = !show
+        self.progressUpload.isHidden = !show
+        self.btnUpload.isHidden = show
+        self.textDescription.isHidden = show
+    }
+    func onFinished() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        self.lblTitle.text = "Uploading video to \(job.title)"
         if let url = info[UIImagePickerControllerMediaURL] as? URL {
             presenter.gotVideo(url: url)
         }
@@ -112,5 +122,6 @@ protocol JobDescriptionView {
     func openPicker()
     func onUploadProgress(progress: Float)
     func uploadProgress(show: Bool)
+    func onFinished()
     
 }

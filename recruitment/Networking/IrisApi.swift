@@ -13,14 +13,17 @@ import UIKit
 
 class IrisApi {
     
-    func login(login: LoginRequest, callbackOk: @escaping (_ response: LoginResponse) -> Void) {
+    func login(login: LoginRequest, callbackOk: @escaping (_ response: LoginResponse) -> Void, onError: @escaping () -> Void) {
         Alamofire.request(Endpoints.login, method: .post, parameters: login.dictionary, encoding: JSONEncoding.default, headers: mobileApiKeyHeader).responseData { (response) in
-            guard self.isOk(response: response.response) else { return }
+            guard self.isOk(response: response.response) else {
+                onError()
+                return
+            }
             if let json = response.result.value {
                 do{
                     let res = try JSONDecoder().decode(LoginResponse.self, from: json)
                     callbackOk(res)
-                }catch { }
+                }catch { onError() }
             }
         }
     }

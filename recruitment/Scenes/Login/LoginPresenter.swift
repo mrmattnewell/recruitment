@@ -19,8 +19,10 @@ class LoginPresenter {
     }
 
     func login(username: String, password: String) {
-        interactor.login(username: username, password: password){
+        interactor.login(username: username, password: password, loginOk: {
             self.view.loginOk()
+        }) {
+            self.view.loginError()
         }
     }
 }

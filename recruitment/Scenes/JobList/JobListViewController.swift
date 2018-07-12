@@ -14,6 +14,7 @@ class JobListViewController: UIViewController, UICollectionViewDelegateFlowLayou
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var btnSignOut: UIButton!
     var jobs: [Job] = []
     var presenter: JobListPresenter!
     
@@ -24,6 +25,7 @@ class JobListViewController: UIViewController, UICollectionViewDelegateFlowLayou
         //self.collectionView.register(JobListCollectionCell.self)
         setupPresenter()
         presenter.viewDidLoad()
+        btnSignOut.roundedButton()
     }
     
     func setupPresenter() {
@@ -52,7 +54,7 @@ class JobListViewController: UIViewController, UICollectionViewDelegateFlowLayou
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width:CGFloat = self.collectionView.frame.width > self.collectionView.frame.height ? (self.collectionView.frame.width / 2) - 20 : self.collectionView.frame.width
-        return CGSize(width: width, height: 100.0)
+        return CGSize(width: width, height: 80.0)
     }
     
     
@@ -68,7 +70,10 @@ class JobListViewController: UIViewController, UICollectionViewDelegateFlowLayou
             self.show(vc, sender: self)
         }
     }
-
+    @IBAction func tappedSignOut(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 

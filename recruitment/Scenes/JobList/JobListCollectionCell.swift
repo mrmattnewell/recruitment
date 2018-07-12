@@ -14,10 +14,12 @@ class JobListCollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var lblTitle: UILabel!
     
+    @IBOutlet weak var lblDesc: UILabel!
     var job: Job? {
         didSet{
             guard let job = self.job else { return }
             lblTitle.text = job.title
+            lblDesc.text = job.description
         }
     }
 }

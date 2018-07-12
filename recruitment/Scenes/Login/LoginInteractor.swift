@@ -14,11 +14,13 @@ class LoginInteractorImpl: LoginInteractor {
     let irisApi = IrisApi()
     let sessionManager = SessionManager.shared()
     
-    func login(username: String, password: String, loginOk: @escaping () -> Void) {
+    func login(username: String, password: String, loginOk: @escaping () -> Void, loginError: @escaping () -> Void) {
         let loginRequest = LoginRequest(username: username, password: password)
-        irisApi.login(login: loginRequest) { (loginResponse) in
-            self.sessionManager.user = loginResponse.user()
+        irisApi.login(login: loginRequest, callbackOk: {[weak self] (loginResponse) in
+            self?.sessionManager.user = loginResponse.user()
             loginOk()
+        }) {
+            loginError()
         }
     }
 }
@@ -26,7 +28,7 @@ class LoginInteractorImpl: LoginInteractor {
 
 
 protocol LoginInteractor {
-    func login(username: String, password: String, loginOk: @escaping () -> Void)
+    func login(username: String, password: String, loginOk: @escaping () -> Void, loginError: @escaping () -> Void) 
 }
 
 

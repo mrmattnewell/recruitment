@@ -48,7 +48,9 @@ class JobDescriptionPresenter: JobDescriptionInteractorOut {
     }
     
     func onUploadConfirmed() {
-        
+        DispatchQueue.main.async {
+            self.view.onFinished()
+        }
     }
 
 }

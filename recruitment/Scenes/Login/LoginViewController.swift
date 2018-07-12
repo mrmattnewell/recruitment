@@ -11,7 +11,7 @@ import UIKit
 import NVActivityIndicatorView
 
 
-class LoginViewController: UIViewController, LoginView, NVActivityIndicatorViewable {
+class LoginViewController: UIViewController, LoginView, NVActivityIndicatorViewable, UITextFieldDelegate {
     var presenter: LoginPresenter!
     
     @IBOutlet weak var txtPassword: LeftViewTextField!
@@ -19,6 +19,7 @@ class LoginViewController: UIViewController, LoginView, NVActivityIndicatorViewa
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupPresenter()
+        txtPassword.delegate = self
     }
     
     func setupPresenter() {
@@ -39,18 +40,34 @@ class LoginViewController: UIViewController, LoginView, NVActivityIndicatorViewa
         self.show(navigationController, sender: self)
     }
     
+    func loginError() {
+        stopAnimating()
+    }
     
-    @IBAction func tappedLogin(_ sender: Any) {
-        
+    func login(){
         guard let username = txtUser.text, let password = txtPassword.text else { return }
         startAnimating(CGSize(width: 50, height: 50), message: nil, type: .ballGridPulse, color: .white, padding: 0)
         self.presenter.login(username: username, password: password)
         txtPassword.resignFirstResponder()
         txtUser.resignFirstResponder()
     }
+    
+    
+    @IBAction func tappedLogin(_ sender: Any) {
+        self.login()
+    }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == txtPassword {
+            self.login()
+        }
+        return true
+    }
 }
 
 
 protocol LoginView {
     func loginOk()
+    func loginError()
 }
