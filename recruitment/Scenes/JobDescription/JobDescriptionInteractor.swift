@@ -47,10 +47,15 @@ class JobDescriptionInteractorImpl: JobDescriptionInteractor {
         }
     }
     
-    func getJobDescription(job: Job, callback: (_ html: String) -> Void){
+    func getJobDescription(job: Job, callback: @escaping (_ url: String) -> Void){
         let pagesRequest = PagesRequest(groupId: job.id)
         irisApi.pages(pagesRequest: pagesRequest, user: sessionManager.user) { pageResponse in
-            let a = ""
+            guard let pageId = pageResponse?.id else { return }
+            callback(Endpoints.render(page: pageId))
+            /*let renderRequest = RenderJobRequest(id: pageId)
+            self.irisApi.renderJobPage(renderRequest: renderRequest, user: self.sessionManager.user) { renderResponse in
+                callback(renderResponse.body.html)
+            }*/
         }
     }
     
@@ -136,7 +141,7 @@ class JobDescriptionInteractorImpl: JobDescriptionInteractor {
 protocol JobDescriptionInteractor {
     func createReflection(videoURL: URL, job: Job)
     func addVideo(job: Job)
-    func getJobDescription(job: Job, callback: (_ html: String) -> Void)
+    func getJobDescription(job: Job, callback: @escaping (_ url: String) -> Void)
 }
 
 protocol JobDescriptionInteractorOut {

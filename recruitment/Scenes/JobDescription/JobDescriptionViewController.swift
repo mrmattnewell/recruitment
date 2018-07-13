@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import MobileCoreServices
+import WebKit
 
 
 class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -16,17 +17,25 @@ class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImag
     var job: Job!
     var presenter: JobDescriptionPresenter!
     
+    @IBOutlet weak var indicatorWebView: UIActivityIndicatorView!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var btnUpload: UIButton!
     @IBOutlet weak var progressUpload: UIProgressView!
     
-    @IBOutlet weak var textDescription: UITextView!
+    @IBOutlet weak var webView: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        indicatorWebView.startAnimating()
         setupPresenter()
         presenter.viewDidLoad()
         self.btnUpload.roundedButton()
         progressUpload.transform = progressUpload.transform.scaledBy(x: 1, y: 20)
+        
+        webView.configuration.preferences.javaScriptEnabled = true
+        webView.scrollView.delegate = self
+        webView.navigationDelegate = self
+        webView.customUserAgent =  "Mozilla/5.0 (iPod; U; CPU iPhone OS 4_3_3 like Mac OS X; ja-jp) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8J2 Safari/6533.18.5"
+        
     }
     
     func setupPresenter() {
@@ -45,7 +54,6 @@ class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImag
     
     func setJob(job: Job) {
         self.title = job.title
-        self.textDescription.text = job.description
         self.lblTitle.text = job.title
     }
     
@@ -97,10 +105,15 @@ class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImag
     func uploadProgress(show: Bool) {
         self.progressUpload.isHidden = !show
         self.btnUpload.isHidden = show
-        self.textDescription.isHidden = show
+        self.webView.isHidden = show
     }
     func onFinished() {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    func setUrl(_ url: String) {
+        let request =  try? URLRequest(url: URL(string: url)!, method: .get, headers: ["auth-token":SessionManager.shared().user!.authenticationKey!])
+        webView.load(request!)
     }
     
     
@@ -112,7 +125,21 @@ class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImag
         
         dismiss(animated: true, completion: nil)
     }
+    deinit {
+        webView.scrollView.delegate = nil
+    }
     
+}
+
+extension JobDescriptionViewController: UIScrollViewDelegate, WKNavigationDelegate {
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return nil
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        self.indicatorWebView.stopAnimating()
+        indicatorWebView.isHidden = true
+    }
 }
 
 
@@ -123,5 +150,6 @@ protocol JobDescriptionView {
     func onUploadProgress(progress: Float)
     func uploadProgress(show: Bool)
     func onFinished()
+    func setUrl(_ url: String)
     
 }

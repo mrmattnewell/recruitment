@@ -17,6 +17,7 @@ class Endpoints {
     static let createReflection = "\(host)/v1/mobile/reflections"
     static let authorization = "\(host)/v1/mobile/primary"
     static let confirmation = "\(host)/v1/mobile/completed"
+    static let render = "https://agora-sdk.irisconnect.com/render_job_page"
     
     static func shareToGroup(reflectionId: Int) -> String {
         return "\(host)/v1/reflections/\(reflectionId)/shares"
@@ -24,5 +25,9 @@ class Endpoints {
     
     static func pages(groupId: Int) -> String {
         return "\(host)/v1/groups/\(groupId)/pages"
+    }
+    
+    static func render(page: Int) -> String {
+        return "\(self.render)?id=\(page)"
     }
 }

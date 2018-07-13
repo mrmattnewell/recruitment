@@ -100,12 +100,25 @@ class IrisApi {
     
     func pages(pagesRequest: PagesRequest, user: User?, callbackOk: ((_ response: PageResponse?) -> Void)?) {
         guard let user = user else { return }
-        Alamofire.request(Endpoints.pages(groupId: pagesRequest.groupId), method: .post, parameters: pagesRequest.dictionary, encoding: JSONEncoding.default, headers: self.authenticationHeader(user: user)).responseData { (response) in
+        Alamofire.request(Endpoints.pages(groupId: pagesRequest.groupId), method: .get, parameters: nil, encoding: JSONEncoding.default, headers: self.authenticationHeader(user: user)).responseData { (response) in
             guard self.isOk(response: response.response) else { return }
             if let json = response.result.value {
                 do{
                     let res = try JSONDecoder().decode([PageResponse].self, from: json)
                     callbackOk?(res.filter { $0.title == "Job Description" }.first)
+                }catch { }
+            }
+        }
+    }
+    
+    func renderJobPage(renderRequest: RenderJobRequest, user: User?, callbackOk: ((_ response: RenderJobResponse) -> Void)?) {
+        guard let user = user else { return }
+        Alamofire.request(Endpoints.render, method: .get, parameters: renderRequest.dictionary, encoding: URLEncoding.queryString, headers: self.authenticationHeaderRender(user: user)).responseData { (response) in
+            guard self.isOk(response: response.response) else { return }
+            if let json = response.result.value {
+                do{
+                    let res = try JSONDecoder().decode(RenderJobResponse.self, from: json)
+                    callbackOk?(res)
                 }catch { }
             }
         }
@@ -119,6 +132,12 @@ class IrisApi {
     func authenticationHeader(user: User) -> [String: String]? {
         guard let key = user.authenticationKey else { return nil }
         return ["x-atlas-mobile-api-key": Endpoints.mobileApiKey, "Authorization": key,
+                "x-atlas-mobile-app-version": "3.7.7(825)"]
+    }
+    
+    func authenticationHeaderRender(user: User) -> [String: String]? {
+        guard let key = user.authenticationKey else { return nil }
+        return ["x-atlas-mobile-api-key": Endpoints.mobileApiKey, "auth-token": key,
                 "x-atlas-mobile-app-version": "3.7.7(825)"]
     }
     

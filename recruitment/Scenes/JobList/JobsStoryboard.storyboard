@@ -140,15 +140,18 @@
                                     <action selector="tappedUpload:" destination="rXd-kC-21U" eventType="touchUpInside" id="xCC-zb-ub7"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MPl-bu-jhM">
-                                <rect key="frame" x="15" y="84" width="345" height="493"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsJ-yw-7WY">
+                                <rect key="frame" x="15" y="72" width="345" height="517"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="pEy-D9-AWL">
+                                <rect key="frame" x="177" y="320.5" width="20" height="20"/>
+                            </activityIndicatorView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GMi-yI-lgz">
-                                <rect key="frame" x="15" y="332.5" width="345" height="2"/>
+                                <rect key="frame" x="15" y="333" width="345" height="2"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qs6-My-7Ep">
                                 <rect key="frame" x="15" y="40" width="345" height="24"/>
@@ -159,27 +162,30 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="akO-1o-VBO" firstAttribute="trailing" secondItem="MPl-bu-jhM" secondAttribute="trailing" constant="15" id="1ls-iK-DKb"/>
+                            <constraint firstItem="qs6-My-7Ep" firstAttribute="leading" secondItem="GMi-yI-lgz" secondAttribute="leading" id="36X-g4-BGi"/>
                             <constraint firstItem="GMi-yI-lgz" firstAttribute="centerY" secondItem="Gbs-os-zQ4" secondAttribute="centerY" id="5Xa-Yv-ZnC"/>
+                            <constraint firstItem="T96-a3-PHf" firstAttribute="top" secondItem="bsJ-yw-7WY" secondAttribute="bottom" constant="8" id="B5F-9b-dCj"/>
                             <constraint firstItem="akO-1o-VBO" firstAttribute="trailing" secondItem="T96-a3-PHf" secondAttribute="trailing" constant="20" id="CFt-mU-CpH"/>
+                            <constraint firstItem="bsJ-yw-7WY" firstAttribute="trailing" secondItem="qs6-My-7Ep" secondAttribute="trailing" id="MQr-0h-nrl"/>
                             <constraint firstItem="T96-a3-PHf" firstAttribute="leading" secondItem="akO-1o-VBO" secondAttribute="leading" constant="20" id="N2r-4k-k4Y"/>
+                            <constraint firstItem="bsJ-yw-7WY" firstAttribute="top" secondItem="qs6-My-7Ep" secondAttribute="bottom" constant="8" id="P8j-2J-nFk"/>
                             <constraint firstItem="qs6-My-7Ep" firstAttribute="top" secondItem="akO-1o-VBO" secondAttribute="top" constant="20" id="PS5-VT-JiH"/>
+                            <constraint firstItem="qs6-My-7Ep" firstAttribute="trailing" secondItem="GMi-yI-lgz" secondAttribute="trailing" id="PmC-cM-ok5"/>
                             <constraint firstItem="akO-1o-VBO" firstAttribute="bottom" secondItem="T96-a3-PHf" secondAttribute="bottom" constant="20" id="QjM-Kf-xfd"/>
-                            <constraint firstItem="MPl-bu-jhM" firstAttribute="top" secondItem="qs6-My-7Ep" secondAttribute="bottom" constant="20" id="Wrw-FH-4Tc"/>
+                            <constraint firstItem="pEy-D9-AWL" firstAttribute="centerX" secondItem="bsJ-yw-7WY" secondAttribute="centerX" id="XqO-Y6-Ema"/>
                             <constraint firstAttribute="trailing" secondItem="GMi-yI-lgz" secondAttribute="trailing" constant="15" id="a4U-Sn-hx4"/>
-                            <constraint firstItem="MPl-bu-jhM" firstAttribute="trailing" secondItem="qs6-My-7Ep" secondAttribute="trailing" id="bWJ-z6-Auk"/>
-                            <constraint firstItem="MPl-bu-jhM" firstAttribute="leading" secondItem="akO-1o-VBO" secondAttribute="leading" constant="15" id="ddT-Ly-nP9"/>
                             <constraint firstItem="GMi-yI-lgz" firstAttribute="leading" secondItem="Gbs-os-zQ4" secondAttribute="leading" constant="15" id="e8E-mx-xZQ"/>
-                            <constraint firstItem="MPl-bu-jhM" firstAttribute="leading" secondItem="qs6-My-7Ep" secondAttribute="leading" id="mhl-wd-N3I"/>
-                            <constraint firstItem="T96-a3-PHf" firstAttribute="top" secondItem="MPl-bu-jhM" secondAttribute="bottom" constant="20" id="nrT-mq-Knq"/>
+                            <constraint firstItem="bsJ-yw-7WY" firstAttribute="leading" secondItem="qs6-My-7Ep" secondAttribute="leading" id="kp7-ga-2sO"/>
+                            <constraint firstItem="pEy-D9-AWL" firstAttribute="centerY" secondItem="bsJ-yw-7WY" secondAttribute="centerY" id="l7I-sx-EcB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="akO-1o-VBO"/>
                     </view>
                     <connections>
                         <outlet property="btnUpload" destination="T96-a3-PHf" id="JSg-qU-hgF"/>
+                        <outlet property="indicatorWebView" destination="pEy-D9-AWL" id="I9o-tx-UdW"/>
                         <outlet property="lblTitle" destination="qs6-My-7Ep" id="5pJ-av-Ytn"/>
                         <outlet property="progressUpload" destination="GMi-yI-lgz" id="QA8-I6-4cm"/>
-                        <outlet property="textDescription" destination="MPl-bu-jhM" id="geJ-Jv-Lmo"/>
+                        <outlet property="webView" destination="bsJ-yw-7WY" id="lrv-wG-Rtj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zCV-ar-9eL" userLabel="First Responder" sceneMemberID="firstResponder"/>

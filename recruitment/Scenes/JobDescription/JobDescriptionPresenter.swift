@@ -26,8 +26,8 @@ class JobDescriptionPresenter: JobDescriptionInteractorOut {
     func viewDidLoad(){
         view.setJob(job: job)
         view.uploadProgress(show: false)
-        interactor.getJobDescription(job: self.job) { (html) in
-            
+        interactor.getJobDescription(job: self.job) { (url) in
+            self.view.setUrl(url)
         }
     }
     
