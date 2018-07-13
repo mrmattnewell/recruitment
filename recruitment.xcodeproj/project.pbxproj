@@ -43,6 +43,8 @@
 		6E44192120DA53600030BC4C /* LeftViewTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44192020DA53600030BC4C /* LeftViewTextField.swift */; };
 		6E44192520DA53DB0030BC4C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E44192420DA53DB0030BC4C /* Login.storyboard */; };
 		6E44192720DA553F0030BC4C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44192620DA553F0030BC4C /* LoginViewController.swift */; };
+		6E57F72C20F8F6540082394F /* PagesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E57F72B20F8F6540082394F /* PagesRequest.swift */; };
+		6E57F72E20F8F7FA0082394F /* PageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E57F72D20F8F7FA0082394F /* PageResponse.swift */; };
 		6E7F601B20F3DFC400C96E88 /* ParameterEncodingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7F601A20F3DFC400C96E88 /* ParameterEncodingExtension.swift */; };
 		6E7F601D20F3FFF500C96E88 /* AuthorizationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7F601C20F3FFF500C96E88 /* AuthorizationRequest.swift */; };
 		6E7F601F20F400D900C96E88 /* AuthorizationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7F601E20F400D900C96E88 /* AuthorizationResponse.swift */; };
@@ -116,6 +118,8 @@
 		6E44192020DA53600030BC4C /* LeftViewTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewTextField.swift; sourceTree = "<group>"; };
 		6E44192420DA53DB0030BC4C /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		6E44192620DA553F0030BC4C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6E57F72B20F8F6540082394F /* PagesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesRequest.swift; sourceTree = "<group>"; };
+		6E57F72D20F8F7FA0082394F /* PageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageResponse.swift; sourceTree = "<group>"; };
 		6E7F601A20F3DFC400C96E88 /* ParameterEncodingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncodingExtension.swift; sourceTree = "<group>"; };
 		6E7F601C20F3FFF500C96E88 /* AuthorizationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationRequest.swift; sourceTree = "<group>"; };
 		6E7F601E20F400D900C96E88 /* AuthorizationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationResponse.swift; sourceTree = "<group>"; };
@@ -249,6 +253,7 @@
 				6E7F601C20F3FFF500C96E88 /* AuthorizationRequest.swift */,
 				6E05F31A20F61F87002D4C6B /* ConfirmationRequest.swift */,
 				6E05F31F20F646A1002D4C6B /* ShareReflectionGroupRequest.swift */,
+				6E57F72B20F8F6540082394F /* PagesRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 				6E7F601E20F400D900C96E88 /* AuthorizationResponse.swift */,
 				6E05F31C20F62057002D4C6B /* ConfirmationResponse.swift */,
 				6E05F32120F646BD002D4C6B /* ShareReflectionGroupResponse.swift */,
+				6E57F72D20F8F7FA0082394F /* PageResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -620,7 +626,9 @@
 				6E0D8B0E20EECA80006C7C33 /* Job.swift in Sources */,
 				6E0D8B2B20F0B197006C7C33 /* JobDescriptionPresenter.swift in Sources */,
 				6E0D8B2620EFD0CB006C7C33 /* JobsResponseExtension.swift in Sources */,
+				6E57F72C20F8F6540082394F /* PagesRequest.swift in Sources */,
 				6E05F31D20F62057002D4C6B /* ConfirmationResponse.swift in Sources */,
+				6E57F72E20F8F7FA0082394F /* PageResponse.swift in Sources */,
 				6E0D8B0120EE79D1006C7C33 /* LoginPresenter.swift in Sources */,
 				6E0D8AFD20EE7680006C7C33 /* Endpoints.swift in Sources */,
 				6E44192120DA53600030BC4C /* LeftViewTextField.swift in Sources */,

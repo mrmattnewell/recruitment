@@ -98,6 +98,19 @@ class IrisApi {
         }
     }
     
+    func pages(pagesRequest: PagesRequest, user: User?, callbackOk: ((_ response: PageResponse?) -> Void)?) {
+        guard let user = user else { return }
+        Alamofire.request(Endpoints.pages(groupId: pagesRequest.groupId), method: .post, parameters: pagesRequest.dictionary, encoding: JSONEncoding.default, headers: self.authenticationHeader(user: user)).responseData { (response) in
+            guard self.isOk(response: response.response) else { return }
+            if let json = response.result.value {
+                do{
+                    let res = try JSONDecoder().decode([PageResponse].self, from: json)
+                    callbackOk?(res.filter { $0.title == "Job Description" }.first)
+                }catch { }
+            }
+        }
+    }
+    
     
     var mobileApiKeyHeader: [String: String] {
         return ["x-atlas-mobile-api-key": Endpoints.mobileApiKey]

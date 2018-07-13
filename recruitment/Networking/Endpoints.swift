@@ -21,4 +21,8 @@ class Endpoints {
     static func shareToGroup(reflectionId: Int) -> String {
         return "\(host)/v1/reflections/\(reflectionId)/shares"
     }
+    
+    static func pages(groupId: Int) -> String {
+        return "\(host)/v1/groups/\(groupId)/pages"
+    }
 }

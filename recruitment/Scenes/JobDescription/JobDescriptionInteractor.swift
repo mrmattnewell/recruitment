@@ -47,6 +47,12 @@ class JobDescriptionInteractorImpl: JobDescriptionInteractor {
         }
     }
     
+    func getJobDescription(job: Job, callback: (_ html: String) -> Void){
+        let pagesRequest = PagesRequest(groupId: job.id)
+        irisApi.pages(pagesRequest: pagesRequest, user: sessionManager.user) { pageResponse in
+            let a = ""
+        }
+    }
     
     
     func addVideo(job: Job) {
@@ -130,6 +136,7 @@ class JobDescriptionInteractorImpl: JobDescriptionInteractor {
 protocol JobDescriptionInteractor {
     func createReflection(videoURL: URL, job: Job)
     func addVideo(job: Job)
+    func getJobDescription(job: Job, callback: (_ html: String) -> Void)
 }
 
 protocol JobDescriptionInteractorOut {
