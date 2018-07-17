@@ -16,10 +16,15 @@ class RecorderViewController: UIViewController {
     var session: AVCaptureSession?
     var userreponsevideoData = NSData()
     var userreponsethumbimageData = NSData()
+    var prevLayer: AVCaptureVideoPreviewLayer?
     
     
     init() {
         super.init(nibName: "RecorderViewController", bundle: Bundle(identifier: "RecorderViewController"))
+    }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -35,12 +40,17 @@ class RecorderViewController: UIViewController {
         super.viewDidAppear(animated)
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        prevLayer?.frame.size = self.view.frame.size
+    }
+    
     func createSession() {
         
         var input: AVCaptureDeviceInput?
         let  movieFileOutput = AVCaptureMovieFileOutput()
-        var prevLayer: AVCaptureVideoPreviewLayer?
-        prevLayer?.frame.size = self.view.frame.size
+        
+        
         session = AVCaptureSession()
         let error: NSError? = nil
         do { input = try AVCaptureDeviceInput(device: self.cameraWithPosition(position: .front)!) } catch {return}

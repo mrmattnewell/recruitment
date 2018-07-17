@@ -41,6 +41,7 @@
 		6E0D8B3120F208A8006C7C33 /* CreateReflectionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B3020F208A8006C7C33 /* CreateReflectionResponse.swift */; };
 		6E0D8B3320F2ABCE006C7C33 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B3220F2ABCE006C7C33 /* Video.swift */; };
 		6E3D8CBB20FE89EE00F2C128 /* RecorderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3D8CBA20FE89EE00F2C128 /* RecorderViewController.xib */; };
+		6E3D8CBD20FE9D4500F2C128 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3D8CBC20FE9D4500F2C128 /* AVFoundation.framework */; };
 		6E44192120DA53600030BC4C /* LeftViewTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44192020DA53600030BC4C /* LeftViewTextField.swift */; };
 		6E44192520DA53DB0030BC4C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E44192420DA53DB0030BC4C /* Login.storyboard */; };
 		6E44192720DA553F0030BC4C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44192620DA553F0030BC4C /* LoginViewController.swift */; };
@@ -120,6 +121,7 @@
 		6E0D8B3020F208A8006C7C33 /* CreateReflectionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReflectionResponse.swift; sourceTree = "<group>"; };
 		6E0D8B3220F2ABCE006C7C33 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		6E3D8CBA20FE89EE00F2C128 /* RecorderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecorderViewController.xib; sourceTree = "<group>"; };
+		6E3D8CBC20FE9D4500F2C128 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		6E44192020DA53600030BC4C /* LeftViewTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewTextField.swift; sourceTree = "<group>"; };
 		6E44192420DA53DB0030BC4C /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		6E44192620DA553F0030BC4C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E3D8CBD20FE9D4500F2C128 /* AVFoundation.framework in Frameworks */,
 				CB40BC92991BEFF12029C459 /* Pods_recruitment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +200,7 @@
 		411071F0C406ECC762132127 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6E3D8CBC20FE9D4500F2C128 /* AVFoundation.framework */,
 				16F053B10BD5C5767A4E92EC /* Pods_recruitment.framework */,
 				B75D594F7420174E18EB9C92 /* Pods_recruitmentTests.framework */,
 				C1D2235459A9E7603868E027 /* Pods_recruitmentUITests.framework */,
