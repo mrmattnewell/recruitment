@@ -28,6 +28,11 @@ class JobListViewController: UIViewController, UICollectionViewDelegateFlowLayou
         btnSignOut.roundedButton()
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        btnSignOut.roundedButton()
+    }
+    
     func setupPresenter() {
         self.presenter = JobListPresenter(view: self)
         let interactor = JobListInteractorImpl()

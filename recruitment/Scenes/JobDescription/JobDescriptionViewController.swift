@@ -28,7 +28,7 @@ class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImag
         indicatorWebView.startAnimating()
         setupPresenter()
         presenter.viewDidLoad()
-        self.btnUpload.roundedButton()
+        
         progressUpload.transform = progressUpload.transform.scaledBy(x: 1, y: 20)
         
         webView.configuration.preferences.javaScriptEnabled = true
@@ -51,6 +51,11 @@ class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImag
         presenter.uploadTapped()
     }
     
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.btnUpload.roundedButton()
+    }
     
     // MARK: JobDescriptionView
     
@@ -84,12 +89,14 @@ class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImag
     }
     
     func openCamera(){
-        let imag = UIImagePickerController()
+        /*let imag = UIImagePickerController()
         imag.delegate = self
         imag.sourceType = UIImagePickerControllerSourceType.camera;
         imag.cameraDevice = UIImagePickerControllerCameraDevice.front
         imag.mediaTypes = [kUTTypeMovie as String];
-        self.present(imag, animated: true, completion: nil)
+        self.present(imag, animated: true, completion: nil)*/
+        let recorderController = RecorderViewController()
+        self.present(recorderController, animated: true, completion: nil)
     }
     
     func openGallery() {

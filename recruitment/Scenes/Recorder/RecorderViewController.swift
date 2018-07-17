@@ -11,13 +11,20 @@ import UIKit
 import AVFoundation
 
 
-class TestViewController: UIViewController {
-    
-    @IBOutlet weak var myView: UIView!
+class RecorderViewController: UIViewController {
     
     var session: AVCaptureSession?
     var userreponsevideoData = NSData()
     var userreponsethumbimageData = NSData()
+    
+    
+    init() {
+        super.init(nibName: "RecorderViewController", bundle: Bundle(identifier: "RecorderViewController"))
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +40,7 @@ class TestViewController: UIViewController {
         var input: AVCaptureDeviceInput?
         let  movieFileOutput = AVCaptureMovieFileOutput()
         var prevLayer: AVCaptureVideoPreviewLayer?
-        prevLayer?.frame.size = myView.frame.size
+        prevLayer?.frame.size = self.view.frame.size
         session = AVCaptureSession()
         let error: NSError? = nil
         do { input = try AVCaptureDeviceInput(device: self.cameraWithPosition(position: .front)!) } catch {return}
@@ -43,10 +50,10 @@ class TestViewController: UIViewController {
             print("camera input error: \(error)")
         }
         prevLayer = AVCaptureVideoPreviewLayer(session: session!)
-        prevLayer?.frame.size = myView.frame.size
+        prevLayer?.frame.size = self.view.frame.size
         prevLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
         prevLayer?.connection?.videoOrientation = .portrait
-        myView.layer.addSublayer(prevLayer!)
+        self.view.layer.addSublayer(prevLayer!)
         let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let  filemainurl = URL(string: ("\(documentsURL.appendingPathComponent("temp"))" + ".mov"))
         
@@ -76,7 +83,7 @@ class TestViewController: UIViewController {
     }
     
 }
-extension TestViewController: AVCaptureFileOutputRecordingDelegate
+extension RecorderViewController: AVCaptureFileOutputRecordingDelegate
 {
     
     func fileOutput(_ output: AVCaptureFileOutput, didStartRecordingTo fileURL: URL, from connections: [AVCaptureConnection]) {
