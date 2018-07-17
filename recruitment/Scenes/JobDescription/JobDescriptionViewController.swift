@@ -34,6 +34,8 @@ class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImag
         webView.configuration.preferences.javaScriptEnabled = true
         webView.scrollView.delegate = self
         webView.navigationDelegate = self
+        webView.configuration.allowsInlineMediaPlayback = true
+        webView.configuration.mediaPlaybackRequiresUserAction = false
         webView.customUserAgent =  "Mozilla/5.0 (iPod; U; CPU iPhone OS 4_3_3 like Mac OS X; ja-jp) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8J2 Safari/6533.18.5"
         
     }
@@ -140,6 +142,38 @@ extension JobDescriptionViewController: UIScrollViewDelegate, WKNavigationDelega
         self.indicatorWebView.stopAnimating()
         indicatorWebView.isHidden = true
     }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        guard navigationAction.sourceFrame != nil, let source = navigationAction.sourceFrame.request.url?.absoluteString else {
+            decisionHandler(.allow)
+            return
+        }
+        if source != navigationAction.request.url?.absoluteString {
+            //let someText:String = "Share file"
+            let objectsToShare:URL = navigationAction.request.url!
+            do{
+                let data = try Data(contentsOf: objectsToShare)
+                let sharedObjects:[AnyObject] = [data as AnyObject]
+                let activityViewController = UIActivityViewController(activityItems : sharedObjects, applicationActivities: nil)
+                activityViewController.popoverPresentationController?.sourceView = self.view
+                
+                //activityViewController.excludedActivityTypes = [ UIActivityType.airDrop, UIActivityType.postToFacebook,UIActivityType.postToTwitter,UIActivityType.mail]
+                
+                self.present(activityViewController, animated: true, completion: nil)
+            }catch {}
+            
+            decisionHandler(.cancel)
+        }else{
+            decisionHandler(.allow)
+        }
+        
+    }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
+        decisionHandler(.allow)
+    }
+    
+    
 }
 
 
