@@ -61,7 +61,6 @@ class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImag
     
     func setJob(job: Job) {
         self.title = job.title
-        self.lblTitle.text = job.title
     }
     
     func openPicker() {

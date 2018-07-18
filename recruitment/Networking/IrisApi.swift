@@ -124,6 +124,12 @@ class IrisApi {
         }
     }
     
+    func resetPassword(resetRequest: ResetPasswordRequest, callbackOk: (() -> Void)?) {
+        Alamofire.request(Endpoints.resetPassword, method: .post, parameters: resetRequest.dictionary, encoding: JSONEncoding.default, headers: self.authenticationResetPassword()).responseData { (response) in
+            callbackOk?()
+        }
+    }
+    
     
     var mobileApiKeyHeader: [String: String] {
         return ["x-atlas-mobile-api-key": Endpoints.mobileApiKey]
@@ -139,6 +145,10 @@ class IrisApi {
         guard let key = user.authenticationKey else { return nil }
         return ["x-atlas-mobile-api-key": Endpoints.mobileApiKey, "auth-token": key,
                 "x-atlas-mobile-app-version": "3.7.7(825)"]
+    }
+    
+    func authenticationResetPassword() -> [String: String]{
+        return ["Authorization": "super_secret_client_api_token"]
     }
     
     func isOk(response: HTTPURLResponse?) -> Bool {

@@ -17,7 +17,9 @@ class LoginInteractorImpl: LoginInteractor {
     func login(username: String, password: String, loginOk: @escaping () -> Void, loginError: @escaping () -> Void) {
         let loginRequest = LoginRequest(username: username, password: password)
         irisApi.login(login: loginRequest, callbackOk: {[weak self] (loginResponse) in
-            self?.sessionManager.user = loginResponse.user()
+            let user = loginResponse.user()
+            user.password = password
+            self?.sessionManager.user = user
             loginOk()
         }) {
             loginError()

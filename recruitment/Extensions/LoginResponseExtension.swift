@@ -12,6 +12,7 @@ import Foundation
 extension LoginResponse {
     func user() -> User {
         let user = User()
+        user.username = self.login.authorization.username
         user.authenticationKey = self.login.authorization.key
         return user
     }

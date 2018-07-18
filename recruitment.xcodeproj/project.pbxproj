@@ -61,6 +61,8 @@
 		6ECF091920D96D51002227B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ECF091720D96D51002227B2 /* LaunchScreen.storyboard */; };
 		6ECF092420D96D51002227B2 /* recruitmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECF092320D96D51002227B2 /* recruitmentTests.swift */; };
 		6ECF092F20D96D51002227B2 /* recruitmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECF092E20D96D51002227B2 /* recruitmentUITests.swift */; };
+		6EEBACB520FF9199004E6D0D /* ResetPasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEBACB420FF9199004E6D0D /* ResetPasswordRequest.swift */; };
+		6EEBACBA20FF9276004E6D0D /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEBACB920FF9276004E6D0D /* ForgotPasswordViewController.swift */; };
 		6EFBDA5120F5256800DEDE43 /* AuthorizationResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFBDA5020F5256800DEDE43 /* AuthorizationResponseExtension.swift */; };
 		6EFBDA5320F52D5B00DEDE43 /* AWSRegionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFBDA5220F52D5B00DEDE43 /* AWSRegionExtension.swift */; };
 		7681A117C394FE5129C20088 /* Pods_recruitmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75D594F7420174E18EB9C92 /* Pods_recruitmentTests.framework */; };
@@ -148,6 +150,8 @@
 		6ECF092A20D96D51002227B2 /* recruitmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = recruitmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ECF092E20D96D51002227B2 /* recruitmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recruitmentUITests.swift; sourceTree = "<group>"; };
 		6ECF093020D96D51002227B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EEBACB420FF9199004E6D0D /* ResetPasswordRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordRequest.swift; sourceTree = "<group>"; };
+		6EEBACB920FF9276004E6D0D /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		6EFBDA5020F5256800DEDE43 /* AuthorizationResponseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationResponseExtension.swift; sourceTree = "<group>"; };
 		6EFBDA5220F52D5B00DEDE43 /* AWSRegionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSRegionExtension.swift; sourceTree = "<group>"; };
 		7383DC3B816F46142721187E /* Pods-recruitmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-recruitmentTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-recruitmentTests/Pods-recruitmentTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -269,6 +273,7 @@
 				6E05F31F20F646A1002D4C6B /* ShareReflectionGroupRequest.swift */,
 				6E57F72B20F8F6540082394F /* PagesRequest.swift */,
 				6E57F72F20F900DB0082394F /* RenderJobRequest.swift */,
+				6EEBACB420FF9199004E6D0D /* ResetPasswordRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -319,6 +324,7 @@
 		6E44192220DA53B60030BC4C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				6EEBACB820FF9264004E6D0D /* ForgotPassword */,
 				6E57F73320F911E30082394F /* Recorder */,
 				6E0D8B2720F0AC21006C7C33 /* JobDescription */,
 				6E0D8B0420EEAF37006C7C33 /* JobList */,
@@ -404,6 +410,14 @@
 				6ECF093020D96D51002227B2 /* Info.plist */,
 			);
 			path = recruitmentUITests;
+			sourceTree = "<group>";
+		};
+		6EEBACB820FF9264004E6D0D /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				6EEBACB920FF9276004E6D0D /* ForgotPasswordViewController.swift */,
+			);
+			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -647,6 +661,7 @@
 				6E0D8B2920F0AC32006C7C33 /* JobDescriptionViewController.swift in Sources */,
 				6E44192720DA553F0030BC4C /* LoginViewController.swift in Sources */,
 				6E0D8B0320EE7AD4006C7C33 /* LoginInteractor.swift in Sources */,
+				6EEBACB520FF9199004E6D0D /* ResetPasswordRequest.swift in Sources */,
 				6EFBDA5120F5256800DEDE43 /* AuthorizationResponseExtension.swift in Sources */,
 				6E0D8B2F20F20568006C7C33 /* CreateReflectionRequest.swift in Sources */,
 				6E0D8B2420EFCFFF006C7C33 /* LoginResponseExtension.swift in Sources */,
@@ -670,6 +685,7 @@
 				6E7F601B20F3DFC400C96E88 /* ParameterEncodingExtension.swift in Sources */,
 				6E0D8B0620EEAF48006C7C33 /* JobListViewController.swift in Sources */,
 				6ECF091120D96D4E002227B2 /* ViewController.swift in Sources */,
+				6EEBACBA20FF9276004E6D0D /* ForgotPasswordViewController.swift in Sources */,
 				6E05F31B20F61F87002D4C6B /* ConfirmationRequest.swift in Sources */,
 				6E0D8B3320F2ABCE006C7C33 /* Video.swift in Sources */,
 				6E0D8B2D20F0B1BF006C7C33 /* JobDescriptionInteractor.swift in Sources */,
@@ -859,8 +875,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3Z233GLKUM;
 				INFOPLIST_FILE = recruitment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -879,8 +895,8 @@
 			baseConfigurationReference = 1D398041A88BCEE9F4000EDC /* Pods-recruitment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3Z233GLKUM;
 				INFOPLIST_FILE = recruitment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -889,8 +905,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.irisconnect.recruitment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4c229568-10b6-4d25-bb0c-3c2c9ec14655";
-				PROVISIONING_PROFILE_SPECIFIER = "Recruitment distribution";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

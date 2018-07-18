@@ -28,6 +28,16 @@ class LoginViewController: UIViewController, LoginView, NVActivityIndicatorViewa
         presenter.interactor = interactor
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     // MARK: LoginView
     func loginOk() {
         stopAnimating()
@@ -56,7 +66,6 @@ class LoginViewController: UIViewController, LoginView, NVActivityIndicatorViewa
     @IBAction func tappedLogin(_ sender: Any) {
         self.login()
     }
-    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == txtPassword {

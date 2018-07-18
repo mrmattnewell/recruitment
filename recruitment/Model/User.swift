@@ -10,4 +10,6 @@ import Foundation
 
 class User {
     var authenticationKey: String?
+    var username: String?
+    var password: String?
 }

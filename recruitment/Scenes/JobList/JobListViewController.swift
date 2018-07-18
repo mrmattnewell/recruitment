@@ -14,9 +14,11 @@ class JobListViewController: UIViewController, UICollectionViewDelegateFlowLayou
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var viewBottom: UIView!
     @IBOutlet weak var btnSignOut: UIButton!
     var jobs: [Job] = []
     var presenter: JobListPresenter!
+    let gradientLayer = CAGradientLayer()
     
     
     override func viewDidLoad() {
@@ -26,11 +28,18 @@ class JobListViewController: UIViewController, UICollectionViewDelegateFlowLayou
         setupPresenter()
         presenter.viewDidLoad()
         btnSignOut.roundedButton()
+        self.collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 70, right: 0)
+        setGradientBackground()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        presenter.loadJobs()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         btnSignOut.roundedButton()
+        gradientLayer.frame = self.viewBottom.bounds
     }
     
     func setupPresenter() {
@@ -77,6 +86,15 @@ class JobListViewController: UIViewController, UICollectionViewDelegateFlowLayou
     }
     @IBAction func tappedSignOut(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func setGradientBackground() {
+        let colorTop =  UIColor.clear.cgColor
+        let colorBottom = UIColor.darkGray.cgColor
+        gradientLayer.colors = [colorTop, colorBottom]
+        gradientLayer.locations = [0.0, 1.0]
+        
+        self.viewBottom.layer.insertSublayer(gradientLayer, at: 0)
     }
     
 }

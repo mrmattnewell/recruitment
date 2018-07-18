@@ -54,13 +54,9 @@ class RecorderViewController: UIViewController {
         createSession()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        OrientationUtility.lockOrientation(.landscapeRight, andRotateTo: .landscapeRight)
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        OrientationUtility.lockOrientation(.landscapeRight, andRotateTo: .landscapeRight)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
