@@ -80,7 +80,7 @@ class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImag
         case .pad:
             alert.popoverPresentationController?.sourceView = btnUpload
             alert.popoverPresentationController?.sourceRect = btnUpload.bounds
-            alert.popoverPresentationController?.permittedArrowDirections = .up
+            alert.popoverPresentationController?.permittedArrowDirections = .down
         default:
             break
         }
