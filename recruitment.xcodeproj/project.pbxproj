@@ -42,6 +42,7 @@
 		6E0D8B3320F2ABCE006C7C33 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B3220F2ABCE006C7C33 /* Video.swift */; };
 		6E3D8CBB20FE89EE00F2C128 /* RecorderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3D8CBA20FE89EE00F2C128 /* RecorderViewController.xib */; };
 		6E3D8CBD20FE9D4500F2C128 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3D8CBC20FE9D4500F2C128 /* AVFoundation.framework */; };
+		6E3D8CBF20FF3F6900F2C128 /* OrientationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3D8CBE20FF3F6900F2C128 /* OrientationUtility.swift */; };
 		6E44192120DA53600030BC4C /* LeftViewTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44192020DA53600030BC4C /* LeftViewTextField.swift */; };
 		6E44192520DA53DB0030BC4C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E44192420DA53DB0030BC4C /* Login.storyboard */; };
 		6E44192720DA553F0030BC4C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44192620DA553F0030BC4C /* LoginViewController.swift */; };
@@ -122,6 +123,7 @@
 		6E0D8B3220F2ABCE006C7C33 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		6E3D8CBA20FE89EE00F2C128 /* RecorderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecorderViewController.xib; sourceTree = "<group>"; };
 		6E3D8CBC20FE9D4500F2C128 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6E3D8CBE20FF3F6900F2C128 /* OrientationUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationUtility.swift; sourceTree = "<group>"; };
 		6E44192020DA53600030BC4C /* LeftViewTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewTextField.swift; sourceTree = "<group>"; };
 		6E44192420DA53DB0030BC4C /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		6E44192620DA553F0030BC4C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				6E0D8B2120EFCEEB006C7C33 /* SessionManager.swift */,
+				6E3D8CBE20FF3F6900F2C128 /* OrientationUtility.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -655,6 +658,7 @@
 				6E57F73220F901970082394F /* RenderJobResponse.swift in Sources */,
 				6E05F31D20F62057002D4C6B /* ConfirmationResponse.swift in Sources */,
 				6E57F72E20F8F7FA0082394F /* PageResponse.swift in Sources */,
+				6E3D8CBF20FF3F6900F2C128 /* OrientationUtility.swift in Sources */,
 				6E0D8B0120EE79D1006C7C33 /* LoginPresenter.swift in Sources */,
 				6E0D8AFD20EE7680006C7C33 /* Endpoints.swift in Sources */,
 				6E44192120DA53600030BC4C /* LeftViewTextField.swift in Sources */,
@@ -855,8 +859,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3Z233GLKUM;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = recruitment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -875,8 +879,8 @@
 			baseConfigurationReference = 1D398041A88BCEE9F4000EDC /* Pods-recruitment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3Z233GLKUM;
 				INFOPLIST_FILE = recruitment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -885,8 +889,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.irisconnect.recruitment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "4c229568-10b6-4d25-bb0c-3c2c9ec14655";
+				PROVISIONING_PROFILE_SPECIFIER = "Recruitment distribution";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

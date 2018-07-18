@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -12,15 +12,73 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecorderViewController" customModule="recruitment" customModuleProvider="target">
             <connections>
+                <outlet property="btnBack" destination="wmN-4b-R8E" id="D85-Ms-dKj"/>
+                <outlet property="btnRecording" destination="aMn-F8-Vml" id="nDi-ql-ZDV"/>
+                <outlet property="btnSwitchCamera" destination="4s1-ap-ge5" id="ytX-R2-oW6"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Ssx-xz-zSr"/>
+                <outlet property="viewPreview" destination="aaE-Qc-9pk" id="fYO-yt-mvM"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aaE-Qc-9pk">
+                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmN-4b-R8E">
+                    <rect key="frame" x="20" y="20" width="36" height="36"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="baseline_arrow_back_white_36pt"/>
+                    <connections>
+                        <action selector="tappedBack:" destination="-1" eventType="touchUpInside" id="kiR-2k-iAU"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMn-F8-Vml">
+                    <rect key="frame" x="308" y="305" width="50" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="idb-zv-awu"/>
+                        <constraint firstAttribute="width" constant="50" id="vje-8w-sFm"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="tappedStartRecording:" destination="-1" eventType="touchUpInside" id="8vw-6K-Lhc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4s1-ap-ge5">
+                    <rect key="frame" x="611" y="20" width="36" height="36"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="baseline_camera_rear_white_36pt"/>
+                    <connections>
+                        <action selector="tappedSwitch:" destination="-1" eventType="touchUpInside" id="fR1-4N-jHb"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="aaE-Qc-9pk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="CgQ-vA-9Ha"/>
+                <constraint firstItem="wmN-4b-R8E" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="ILY-uC-bjE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4s1-ap-ge5" secondAttribute="trailing" constant="20" id="N9C-nc-tu6"/>
+                <constraint firstAttribute="trailing" secondItem="aaE-Qc-9pk" secondAttribute="trailing" id="Q4b-Ue-3hB"/>
+                <constraint firstItem="4s1-ap-ge5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="Sfv-gW-kqK"/>
+                <constraint firstItem="aMn-F8-Vml" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Xph-Fl-ImD"/>
+                <constraint firstItem="aaE-Qc-9pk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gIG-el-WDA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="aMn-F8-Vml" secondAttribute="bottom" constant="20" id="pdO-OT-Emt"/>
+                <constraint firstAttribute="bottom" secondItem="aaE-Qc-9pk" secondAttribute="bottom" id="sKZ-ba-bFd"/>
+                <constraint firstItem="wmN-4b-R8E" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="sKZ-zl-lXq"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="baseline_arrow_back_white_36pt" width="36" height="36"/>
+        <image name="baseline_camera_rear_white_36pt" width="36" height="36"/>
+    </resources>
 </document>

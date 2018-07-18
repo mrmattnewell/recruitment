@@ -12,7 +12,7 @@ import MobileCoreServices
 import WebKit
 
 
-class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImagePickerControllerDelegate, UINavigationControllerDelegate, RecorderDelegate {
     
     var job: Job!
     var presenter: JobDescriptionPresenter!
@@ -96,6 +96,7 @@ class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImag
         imag.mediaTypes = [kUTTypeMovie as String];
         self.present(imag, animated: true, completion: nil)*/
         let recorderController = RecorderViewController()
+        recorderController.recorderDelegate = self
         self.present(recorderController, animated: true, completion: nil)
     }
     
@@ -134,6 +135,13 @@ class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImag
         
         dismiss(animated: true, completion: nil)
     }
+    
+    func recorderFinished(recorder: RecorderViewController, url: URL) {
+        self.lblTitle.text = "Uploading video to \(job.title)"
+        presenter.gotVideo(url: url)
+        dismiss(animated: true, completion: nil)
+    }
+    
     deinit {
         webView.scrollView.delegate = nil
     }

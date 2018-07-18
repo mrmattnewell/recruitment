@@ -20,4 +20,9 @@ extension UIButton{
         maskLayer1.path = maskPath1.cgPath
         layer.mask = maskLayer1
     }
+    
+    func circleButton(){
+        self.layer.cornerRadius = 0.5 * self.bounds.size.width
+        self.clipsToBounds = true
+    }
 }
