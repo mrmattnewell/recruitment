@@ -85,7 +85,12 @@ class JobListViewController: UIViewController, UICollectionViewDelegateFlowLayou
         }
     }
     @IBAction func tappedSignOut(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        //self.dismiss(animated: true, completion: nil)
+        self.presenter.logOut()
+        if let appdelegate = UIApplication.shared.delegate as? AppDelegate {
+            appdelegate.showLogin()
+        }
+        
     }
     
     func setGradientBackground() {

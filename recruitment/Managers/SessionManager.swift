@@ -26,6 +26,14 @@ class SessionManager {
         self.user = try? getCredentials()
     }
     
+    func isAuthenticated() -> Bool {
+        return self.user?.authenticationKey != nil
+    }
+    
+    func hasCredentials() -> Bool {
+        return self.user != nil
+    }
+    
     func setCredentials(user: User) {
         let account = user.username
         let password = user.password?.data(using: String.Encoding.utf8)!
@@ -43,7 +51,7 @@ class SessionManager {
         self.user = user
     }
     
-    func getCredentials() throws -> User {
+    private func getCredentials() throws -> User {
         let query: [String: Any] = [kSecClass as String: kSecClassInternetPassword,
                                     kSecAttrServer as String: Endpoints.host,
                                     kSecMatchLimit as String: kSecMatchLimitOne,
@@ -68,6 +76,13 @@ class SessionManager {
         user.username = account
         user.password = password
         return user
+    }
+    
+    func removeCredentials() throws {
+        let query: [String: Any] = [kSecClass as String: kSecClassInternetPassword,
+                                    kSecAttrServer as String: Endpoints.host]
+        let status = SecItemDelete(query as CFDictionary)
+        guard status == errSecSuccess || status == errSecItemNotFound else { throw KeychainError.unhandledError(status: status) }
     }
 
     class func shared() -> SessionManager {

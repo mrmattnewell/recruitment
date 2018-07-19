@@ -23,6 +23,10 @@ class JobListPresenter {
         
     }
     
+    func logOut(){
+        interactor.logout()
+    }
+    
     func loadJobs(){
         interactor.getJobs { (jobs) in
             self.view.showJobs(jobs: jobs)

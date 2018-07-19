@@ -19,36 +19,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         Fabric.with([Crashlytics.self])
-        var controller: UIViewController?
-        let irisApi: IrisApi = IrisApi()
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()
         
-        do{
-            let user = try SessionManager.shared().getCredentials()
-            let request = LoginRequest(username: user.username!, password: user.password!)
-            irisApi.login(login: request, callbackOk: { (response) in
-                SessionManager.shared().user = response.user()
-                self.showJobs()
-            }) {
-                self.showLogin()
-            }
-        }catch{
+
+        if SessionManager.shared().hasCredentials() {
+            self.showJobs()
+        }else{
             self.showLogin()
         }
-        
-        return false
+        return true
     }
     
     func showLogin(){
         let controller = UIStoryboard(name: "Login", bundle: Bundle.main).instantiateInitialViewController()
-        
+        self.window?.rootViewController = controller
     }
     
     func showJobs(){
         let controller = UIStoryboard(name: "JobsStoryboard", bundle: Bundle.main).instantiateInitialViewController()
-        self.window?.rootViewController = controller
+        let navigationController = UINavigationController(rootViewController: controller!)
+        self.window?.rootViewController = navigationController
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

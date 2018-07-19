@@ -10,11 +10,11 @@ import Foundation
 
 
 struct JobsRequest: Codable {
-    let search: String = "JOBGROUP,"
+    let type: String = "job"
     let perPage: Int = -1
     
     private enum CodingKeys: String, CodingKey {
-        case search
+        case type = "group.type"
         case perPage = "per_page" 
     }
 }

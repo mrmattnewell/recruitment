@@ -12,7 +12,7 @@ import Foundation
 extension JobsResponse{
     func job() -> Job {
         
-        let job = Job(id: self.id, title: self.name.replacingOccurrences(of: "JOBGROUP,", with: ""), description: self.description)
+        let job = Job(id: self.id, title: self.name, description: self.description)
         return job
     }
 }
