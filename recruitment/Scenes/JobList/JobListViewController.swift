@@ -27,7 +27,7 @@ class JobListViewController: UIViewController, UICollectionViewDelegateFlowLayou
         //self.collectionView.register(JobListCollectionCell.self)
         setupPresenter()
         presenter.viewDidLoad()
-        btnSignOut.roundedButton()
+        btnSignOut.rounded()
         self.collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 70, right: 0)
         setGradientBackground()
     }
@@ -38,7 +38,7 @@ class JobListViewController: UIViewController, UICollectionViewDelegateFlowLayou
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        btnSignOut.roundedButton()
+        btnSignOut.rounded()
         gradientLayer.frame = self.viewBottom.bounds
     }
     

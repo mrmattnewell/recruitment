@@ -105,7 +105,7 @@ class IrisApi {
             if let json = response.result.value {
                 do{
                     let res = try JSONDecoder().decode([PageResponse].self, from: json)
-                    callbackOk?(res.filter { $0.title == "Job Description" }.first)
+                    callbackOk?(res.filter { $0.type == "job" }.first)
                 }catch { }
             }
         }

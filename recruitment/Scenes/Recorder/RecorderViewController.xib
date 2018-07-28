@@ -13,9 +13,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecorderViewController" customModule="recruitment" customModuleProvider="target">
             <connections>
                 <outlet property="btnBack" destination="wmN-4b-R8E" id="D85-Ms-dKj"/>
+                <outlet property="btnPlay" destination="zWb-4l-4us" id="bzb-O7-TCZ"/>
                 <outlet property="btnRecording" destination="aMn-F8-Vml" id="nDi-ql-ZDV"/>
+                <outlet property="btnRetake" destination="v4D-6G-6xh" id="Q0F-0L-vts"/>
                 <outlet property="btnSwitchCamera" destination="4s1-ap-ge5" id="ytX-R2-oW6"/>
+                <outlet property="btnUpload" destination="tB5-z8-LX6" id="7mZ-FE-5ln"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Ssx-xz-zSr"/>
+                <outlet property="viewControls" destination="OV4-YB-3DM" id="cse-cQ-Xhl"/>
                 <outlet property="viewPreview" destination="aaE-Qc-9pk" id="fYO-yt-mvM"/>
             </connections>
         </placeholder>
@@ -59,6 +63,67 @@
                         <action selector="tappedSwitch:" destination="-1" eventType="touchUpInside" id="fR1-4N-jHb"/>
                     </connections>
                 </button>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OV4-YB-3DM">
+                    <rect key="frame" x="183" y="72.5" width="300" height="230"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWb-4l-4us">
+                            <rect key="frame" x="20" y="20" width="260" height="50"/>
+                            <color key="backgroundColor" red="0.41960784309999999" green="0.65490196079999996" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="XVo-jp-86m"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <state key="normal" title="Play">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="tappedPlay:" destination="-1" eventType="touchUpInside" id="8Pc-sV-zbc"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4D-6G-6xh">
+                            <rect key="frame" x="20" y="90" width="260" height="50"/>
+                            <color key="backgroundColor" red="0.41960784309999999" green="0.65490196079999996" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="oAf-gm-YjH"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <state key="normal" title="Retake">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="tappedRetake:" destination="-1" eventType="touchUpInside" id="Hed-Pi-Yoe"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tB5-z8-LX6">
+                            <rect key="frame" x="20" y="160" width="260" height="50"/>
+                            <color key="backgroundColor" red="0.41960784309999999" green="0.65490196079999996" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="O5d-Lz-kZm"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <state key="normal" title="Upload Video">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="tappedUpload:" destination="-1" eventType="touchUpInside" id="aG5-z5-jCF"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="v4D-6G-6xh" firstAttribute="leading" secondItem="OV4-YB-3DM" secondAttribute="leading" constant="20" id="5mE-pV-eAq"/>
+                        <constraint firstAttribute="trailing" secondItem="tB5-z8-LX6" secondAttribute="trailing" constant="20" id="IxP-fU-nID"/>
+                        <constraint firstItem="zWb-4l-4us" firstAttribute="leading" secondItem="OV4-YB-3DM" secondAttribute="leading" constant="20" id="QzJ-2h-Jji"/>
+                        <constraint firstAttribute="width" constant="300" id="RZL-bB-EfB"/>
+                        <constraint firstItem="tB5-z8-LX6" firstAttribute="top" secondItem="v4D-6G-6xh" secondAttribute="bottom" constant="20" id="RbN-Bn-Tcd"/>
+                        <constraint firstItem="tB5-z8-LX6" firstAttribute="leading" secondItem="OV4-YB-3DM" secondAttribute="leading" constant="20" id="dQl-5u-i2h"/>
+                        <constraint firstItem="zWb-4l-4us" firstAttribute="top" secondItem="OV4-YB-3DM" secondAttribute="top" constant="20" id="mJQ-9d-kmk"/>
+                        <constraint firstAttribute="bottom" secondItem="tB5-z8-LX6" secondAttribute="bottom" constant="20" id="nwb-zI-O4L"/>
+                        <constraint firstAttribute="trailing" secondItem="zWb-4l-4us" secondAttribute="trailing" constant="20" id="pMl-P3-70N"/>
+                        <constraint firstAttribute="trailing" secondItem="v4D-6G-6xh" secondAttribute="trailing" constant="20" id="tWd-8U-14B"/>
+                        <constraint firstItem="v4D-6G-6xh" firstAttribute="top" secondItem="zWb-4l-4us" secondAttribute="bottom" constant="20" id="tav-iC-DdN"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -68,10 +133,12 @@
                 <constraint firstAttribute="trailing" secondItem="aaE-Qc-9pk" secondAttribute="trailing" id="Q4b-Ue-3hB"/>
                 <constraint firstItem="4s1-ap-ge5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="Sfv-gW-kqK"/>
                 <constraint firstItem="aMn-F8-Vml" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Xph-Fl-ImD"/>
+                <constraint firstItem="OV4-YB-3DM" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dOT-0N-2Pr"/>
                 <constraint firstItem="aaE-Qc-9pk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gIG-el-WDA"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="aMn-F8-Vml" secondAttribute="bottom" constant="20" id="pdO-OT-Emt"/>
                 <constraint firstAttribute="bottom" secondItem="aaE-Qc-9pk" secondAttribute="bottom" id="sKZ-ba-bFd"/>
                 <constraint firstItem="wmN-4b-R8E" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="sKZ-zl-lXq"/>
+                <constraint firstItem="OV4-YB-3DM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="u9G-jc-lq7"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="34.5" y="53.5"/>

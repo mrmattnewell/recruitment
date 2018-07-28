@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 
-extension UIButton{
-    func roundedButton(){
+extension UIView{
+    func rounded(){
         let maskPath1 = UIBezierPath(roundedRect: bounds,
                                      byRoundingCorners: [.topLeft , .topRight, .bottomLeft, .bottomRight],
                                      cornerRadii: CGSize(width: 8, height: 8))
@@ -21,7 +21,7 @@ extension UIButton{
         layer.mask = maskLayer1
     }
     
-    func circleButton(){
+    func circle(){
         self.layer.cornerRadius = 0.5 * self.bounds.size.width
         self.clipsToBounds = true
     }

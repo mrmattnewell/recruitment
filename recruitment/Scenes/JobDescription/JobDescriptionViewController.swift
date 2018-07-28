@@ -54,7 +54,7 @@ class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImag
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        self.btnUpload.roundedButton()
+        self.btnUpload.rounded()
     }
     
     // MARK: JobDescriptionView

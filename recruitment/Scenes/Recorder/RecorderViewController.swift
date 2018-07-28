@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import AVFoundation
+import AVKit
 
 
 class RecorderViewController: UIViewController {
@@ -23,13 +24,18 @@ class RecorderViewController: UIViewController {
     var cameraPosition: AVCaptureDevice.Position = .front
     
     weak var recorderDelegate: RecorderDelegate?
+    var outputUrl: URL?
     
     var movieFileOutput: AVCaptureMovieFileOutput
     
+    @IBOutlet weak var btnPlay: UIButton!
+    @IBOutlet weak var btnRetake: UIButton!
+    @IBOutlet weak var btnUpload: UIButton!
     @IBOutlet weak var viewPreview: UIView!
     @IBOutlet weak var btnRecording: UIButton!
     @IBOutlet weak var btnSwitchCamera: UIButton!
     @IBOutlet weak var btnBack: UIButton!
+    @IBOutlet weak var viewControls: UIView!
     
     
     
@@ -68,7 +74,11 @@ class RecorderViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         prevLayer?.frame.size = self.viewPreview.frame.size
-        self.btnRecording.circleButton()
+        self.btnRecording.circle()
+        self.btnUpload.rounded()
+        self.btnRetake.rounded()
+        self.btnPlay.rounded()
+        self.viewControls.rounded()
     }
     
     func createSession() {
@@ -89,8 +99,8 @@ class RecorderViewController: UIViewController {
         
         
         
-        let maxDuration: CMTime = CMTimeMake(600, 10)
-        movieFileOutput.maxRecordedDuration = maxDuration
+        //let maxDuration: CMTime = CMTimeMake(600, 10)
+        //movieFileOutput.maxRecordedDuration = maxDuration
         movieFileOutput.minFreeDiskSpaceLimit = 1024 * 1024
         if self.session!.canAddOutput(movieFileOutput) {
             self.session!.addOutput(movieFileOutput)
@@ -150,14 +160,31 @@ class RecorderViewController: UIViewController {
         } else {
             session?.addInput(newVideoInput)
         }
+        
+        let connection = movieFileOutput.connection(with: .video)
+        connection?.videoOrientation = .landscapeRight
+        
+        movieFileOutput.setRecordsVideoOrientationAndMirroringChangesAsMetadataTrack(true, for: connection!)
+        
+        
         session?.commitConfiguration()
     }
+    
+    
+    func playVideo(url: URL) {
+        let player = AVPlayer(url: url)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        self.present(playerViewController, animated: true) {
+            playerViewController.player!.play()
+        }
+    }
+    
     
     @IBAction func tappedStartRecording(_ sender: Any) {
         switch recordingStatus {
         case .ready:
-            self.btnSwitchCamera.isHidden = true
-            self.btnBack.isHidden = true
+            self.showButtons(show: false)
             self.recordingStatus = .starting
             let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
             let  filemainurl = URL(string: ("\(documentsURL.appendingPathComponent("temp"))" + ".mov"))
@@ -169,6 +196,12 @@ class RecorderViewController: UIViewController {
             break
         }
     }
+    
+    func showButtons(show: Bool) {
+        self.btnSwitchCamera.isHidden = !show
+        self.btnBack.isHidden = !show
+    }
+    
     @IBAction func tappedSwitch(_ sender: Any) {
         if cameraPosition == .front {
             self.cameraPosition = .back
@@ -186,6 +219,25 @@ class RecorderViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func tappedPlay(_ sender: Any) {
+        guard let url = self.outputUrl else { return }
+        self.playVideo(url: url)
+    }
+    
+    @IBAction func tappedUpload(_ sender: Any) {
+        guard let url = self.outputUrl else { return }
+        recorderDelegate?.recorderFinished(recorder: self, url: url)
+    }
+    
+    @IBAction func tappedRetake(_ sender: Any) {
+        self.btnRecording.backgroundColor = UIColor.white
+        self.showButtons(show: true)
+        self.recordingStatus = .ready
+        self.viewControls.isHidden = true
+        session?.startRunning()
+        self.outputUrl = nil
+    }
+    
     
 }
 extension RecorderViewController: AVCaptureFileOutputRecordingDelegate {
@@ -194,7 +246,13 @@ extension RecorderViewController: AVCaptureFileOutputRecordingDelegate {
     }
     
     func fileOutput(_ output: AVCaptureFileOutput, didFinishRecordingTo outputFileURL: URL, from connections: [AVCaptureConnection], error: Error?) {
-        recorderDelegate?.recorderFinished(recorder: self, url: outputFileURL)
+        recordingStatus = .stopped
+        session?.stopRunning()
+        DispatchQueue.main.async {
+            self.viewControls.isHidden = false
+        }
+        
+        self.outputUrl = outputFileURL
     }
 }
 
