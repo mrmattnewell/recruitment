@@ -51,6 +51,62 @@
 		6E57F73020F900DB0082394F /* RenderJobRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E57F72F20F900DB0082394F /* RenderJobRequest.swift */; };
 		6E57F73220F901970082394F /* RenderJobResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E57F73120F901970082394F /* RenderJobResponse.swift */; };
 		6E57F73520F911F00082394F /* RecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E57F73420F911F00082394F /* RecorderViewController.swift */; };
+		6E7EC1AC21232FF0003E5A4B /* ShareReflectionGroupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E05F31F20F646A1002D4C6B /* ShareReflectionGroupRequest.swift */; };
+		6E7EC1AD21232FF0003E5A4B /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E05F32320F6655A002D4C6B /* UIButtonExtension.swift */; };
+		6E7EC1AE21232FF0003E5A4B /* JobListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B0720EEAF59006C7C33 /* JobListPresenter.swift */; };
+		6E7EC1AF21232FF0003E5A4B /* JobsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B1820EED009006C7C33 /* JobsRequest.swift */; };
+		6E7EC1B021232FF0003E5A4B /* IrisApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8AF720EE705E006C7C33 /* IrisApi.swift */; };
+		6E7EC1B121232FF0003E5A4B /* JobDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B2820F0AC32006C7C33 /* JobDescriptionViewController.swift */; };
+		6E7EC1B221232FF0003E5A4B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44192620DA553F0030BC4C /* LoginViewController.swift */; };
+		6E7EC1B321232FF0003E5A4B /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B0220EE7AD4006C7C33 /* LoginInteractor.swift */; };
+		6E7EC1B421232FF0003E5A4B /* ResetPasswordRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEBACB420FF9199004E6D0D /* ResetPasswordRequest.swift */; };
+		6E7EC1B521232FF0003E5A4B /* AuthorizationResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFBDA5020F5256800DEDE43 /* AuthorizationResponseExtension.swift */; };
+		6E7EC1B621232FF0003E5A4B /* CreateReflectionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B2E20F20568006C7C33 /* CreateReflectionRequest.swift */; };
+		6E7EC1B721232FF0003E5A4B /* LoginResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B2320EFCFFF006C7C33 /* LoginResponseExtension.swift */; };
+		6E7EC1B821232FF0003E5A4B /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8AFA20EE74A3006C7C33 /* LoginRequest.swift */; };
+		6E7EC1B921232FF0003E5A4B /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B0D20EECA80006C7C33 /* Job.swift */; };
+		6E7EC1BA21232FF0003E5A4B /* JobDescriptionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B2A20F0B197006C7C33 /* JobDescriptionPresenter.swift */; };
+		6E7EC1BB21232FF0003E5A4B /* JobsResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B2520EFD0CB006C7C33 /* JobsResponseExtension.swift */; };
+		6E7EC1BC21232FF0003E5A4B /* PagesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E57F72B20F8F6540082394F /* PagesRequest.swift */; };
+		6E7EC1BD21232FF0003E5A4B /* RenderJobResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E57F73120F901970082394F /* RenderJobResponse.swift */; };
+		6E7EC1BE21232FF0003E5A4B /* ConfirmationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E05F31C20F62057002D4C6B /* ConfirmationResponse.swift */; };
+		6E7EC1BF21232FF0003E5A4B /* PageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E57F72D20F8F7FA0082394F /* PageResponse.swift */; };
+		6E7EC1C021232FF0003E5A4B /* OrientationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3D8CBE20FF3F6900F2C128 /* OrientationUtility.swift */; };
+		6E7EC1C121232FF0003E5A4B /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B0020EE79D1006C7C33 /* LoginPresenter.swift */; };
+		6E7EC1C221232FF0003E5A4B /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8AFC20EE7680006C7C33 /* Endpoints.swift */; };
+		6E7EC1C321232FF0003E5A4B /* LeftViewTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44192020DA53600030BC4C /* LeftViewTextField.swift */; };
+		6E7EC1C421232FF0003E5A4B /* AuthorizationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7F601C20F3FFF500C96E88 /* AuthorizationRequest.swift */; };
+		6E7EC1C521232FF0003E5A4B /* CreateReflectionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B3020F208A8006C7C33 /* CreateReflectionResponse.swift */; };
+		6E7EC1C621232FF0003E5A4B /* ShareReflectionGroupResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E05F32120F646BD002D4C6B /* ShareReflectionGroupResponse.swift */; };
+		6E7EC1C721232FF0003E5A4B /* RecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E57F73420F911F00082394F /* RecorderViewController.swift */; };
+		6E7EC1C821232FF0003E5A4B /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B2120EFCEEB006C7C33 /* SessionManager.swift */; };
+		6E7EC1C921232FF0003E5A4B /* ParameterEncodingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7F601A20F3DFC400C96E88 /* ParameterEncodingExtension.swift */; };
+		6E7EC1CA21232FF0003E5A4B /* JobListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B0520EEAF48006C7C33 /* JobListViewController.swift */; };
+		6E7EC1CB21232FF0003E5A4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECF091020D96D4E002227B2 /* ViewController.swift */; };
+		6E7EC1CC21232FF0003E5A4B /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEBACB920FF9276004E6D0D /* ForgotPasswordViewController.swift */; };
+		6E7EC1CD21232FF0003E5A4B /* ConfirmationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E05F31A20F61F87002D4C6B /* ConfirmationRequest.swift */; };
+		6E7EC1CE21232FF0003E5A4B /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B3220F2ABCE006C7C33 /* Video.swift */; };
+		6E7EC1CF21232FF0003E5A4B /* JobDescriptionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B2C20F0B1BF006C7C33 /* JobDescriptionInteractor.swift */; };
+		6E7EC1D021232FF0003E5A4B /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8AFE20EE7776006C7C33 /* LoginResponse.swift */; };
+		6E7EC1D121232FF0003E5A4B /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B1220EECE05006C7C33 /* Reusable.swift */; };
+		6E7EC1D221232FF0003E5A4B /* JobListCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B0F20EECBFD006C7C33 /* JobListCollectionCell.swift */; };
+		6E7EC1D321232FF0003E5A4B /* NibExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B1420EECE4B006C7C33 /* NibExtension.swift */; };
+		6E7EC1D421232FF0003E5A4B /* JobsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B1A20EED026006C7C33 /* JobsResponse.swift */; };
+		6E7EC1D521232FF0003E5A4B /* LoginErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B1C20EED0FC006C7C33 /* LoginErrorResponse.swift */; };
+		6E7EC1D621232FF0003E5A4B /* RenderJobRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E57F72F20F900DB0082394F /* RenderJobRequest.swift */; };
+		6E7EC1D721232FF0003E5A4B /* JobListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B0920EEAF67006C7C33 /* JobListInteractor.swift */; };
+		6E7EC1D821232FF0003E5A4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECF090E20D96D4E002227B2 /* AppDelegate.swift */; };
+		6E7EC1D921232FF0003E5A4B /* AWSRegionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFBDA5220F52D5B00DEDE43 /* AWSRegionExtension.swift */; };
+		6E7EC1DA21232FF0003E5A4B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D8B1E20EFA78F006C7C33 /* User.swift */; };
+		6E7EC1DB21232FF0003E5A4B /* AuthorizationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7F601E20F400D900C96E88 /* AuthorizationResponse.swift */; };
+		6E7EC1DD21232FF0003E5A4B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3D8CBC20FE9D4500F2C128 /* AVFoundation.framework */; };
+		6E7EC1DE21232FF0003E5A4B /* Pods_recruitment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F053B10BD5C5767A4E92EC /* Pods_recruitment.framework */; };
+		6E7EC1E021232FF0003E5A4B /* RecorderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3D8CBA20FE89EE00F2C128 /* RecorderViewController.xib */; };
+		6E7EC1E121232FF0003E5A4B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E44192420DA53DB0030BC4C /* Login.storyboard */; };
+		6E7EC1E221232FF0003E5A4B /* JobsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D8B0B20EEAFF9006C7C33 /* JobsStoryboard.storyboard */; };
+		6E7EC1E321232FF0003E5A4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ECF091720D96D51002227B2 /* LaunchScreen.storyboard */; };
+		6E7EC1E421232FF0003E5A4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ECF091520D96D51002227B2 /* Assets.xcassets */; };
+		6E7EC1E521232FF0003E5A4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ECF091220D96D4E002227B2 /* Main.storyboard */; };
 		6E7F601B20F3DFC400C96E88 /* ParameterEncodingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7F601A20F3DFC400C96E88 /* ParameterEncodingExtension.swift */; };
 		6E7F601D20F3FFF500C96E88 /* AuthorizationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7F601C20F3FFF500C96E88 /* AuthorizationRequest.swift */; };
 		6E7F601F20F400D900C96E88 /* AuthorizationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7F601E20F400D900C96E88 /* AuthorizationResponse.swift */; };
@@ -134,6 +190,8 @@
 		6E57F72F20F900DB0082394F /* RenderJobRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderJobRequest.swift; sourceTree = "<group>"; };
 		6E57F73120F901970082394F /* RenderJobResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderJobResponse.swift; sourceTree = "<group>"; };
 		6E57F73420F911F00082394F /* RecorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderViewController.swift; sourceTree = "<group>"; };
+		6E7EC1EB21232FF0003E5A4B /* recruitmentAppstore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = recruitmentAppstore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E7EC1EC21232FF0003E5A4B /* recruitment copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "recruitment copy-Info.plist"; path = "/Users/pablo/Documents/iOSApps/recruitment/recruitment copy-Info.plist"; sourceTree = "<absolute>"; };
 		6E7F601A20F3DFC400C96E88 /* ParameterEncodingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncodingExtension.swift; sourceTree = "<group>"; };
 		6E7F601C20F3FFF500C96E88 /* AuthorizationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationRequest.swift; sourceTree = "<group>"; };
 		6E7F601E20F400D900C96E88 /* AuthorizationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationResponse.swift; sourceTree = "<group>"; };
@@ -162,6 +220,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6E7EC1DC21232FF0003E5A4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E7EC1DD21232FF0003E5A4B /* AVFoundation.framework in Frameworks */,
+				6E7EC1DE21232FF0003E5A4B /* Pods_recruitment.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6ECF090820D96D4E002227B2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,6 +429,7 @@
 				6ECF090C20D96D4E002227B2 /* Products */,
 				3147DF9890ED2359A2246246 /* Pods */,
 				411071F0C406ECC762132127 /* Frameworks */,
+				6E7EC1EC21232FF0003E5A4B /* recruitment copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -371,6 +439,7 @@
 				6ECF090B20D96D4E002227B2 /* recruitment.app */,
 				6ECF091F20D96D51002227B2 /* recruitmentTests.xctest */,
 				6ECF092A20D96D51002227B2 /* recruitmentUITests.xctest */,
+				6E7EC1EB21232FF0003E5A4B /* recruitmentAppstore.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -423,6 +492,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6E7EC1A921232FF0003E5A4B /* recruitmentAppstore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E7EC1E821232FF0003E5A4B /* Build configuration list for PBXNativeTarget "recruitmentAppstore" */;
+			buildPhases = (
+				6E7EC1AA21232FF0003E5A4B /* [CP] Check Pods Manifest.lock */,
+				6E7EC1AB21232FF0003E5A4B /* Sources */,
+				6E7EC1DC21232FF0003E5A4B /* Frameworks */,
+				6E7EC1DF21232FF0003E5A4B /* Resources */,
+				6E7EC1E621232FF0003E5A4B /* [CP] Embed Pods Frameworks */,
+				6E7EC1E721232FF0003E5A4B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = recruitmentAppstore;
+			productName = recruitment;
+			productReference = 6E7EC1EB21232FF0003E5A4B /* recruitmentAppstore.app */;
+			productType = "com.apple.product-type.application";
+		};
 		6ECF090A20D96D4E002227B2 /* recruitment */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6ECF093320D96D51002227B2 /* Build configuration list for PBXNativeTarget "recruitment" */;
@@ -520,11 +609,25 @@
 				6ECF090A20D96D4E002227B2 /* recruitment */,
 				6ECF091E20D96D51002227B2 /* recruitmentTests */,
 				6ECF092920D96D51002227B2 /* recruitmentUITests */,
+				6E7EC1A921232FF0003E5A4B /* recruitmentAppstore */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6E7EC1DF21232FF0003E5A4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E7EC1E021232FF0003E5A4B /* RecorderViewController.xib in Resources */,
+				6E7EC1E121232FF0003E5A4B /* Login.storyboard in Resources */,
+				6E7EC1E221232FF0003E5A4B /* JobsStoryboard.storyboard in Resources */,
+				6E7EC1E321232FF0003E5A4B /* LaunchScreen.storyboard in Resources */,
+				6E7EC1E421232FF0003E5A4B /* Assets.xcassets in Resources */,
+				6E7EC1E521232FF0003E5A4B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6ECF090920D96D4E002227B2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -604,6 +707,61 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" 6de6008e0e7fff237bba9937ee673f5baec10e01 2f2c91086ea178bb40ce842269ab13f0d3ba0426c5ddbc060b3756fd6ab0575a";
 		};
+		6E7EC1AA21232FF0003E5A4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-recruitment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E7EC1E621232FF0003E5A4B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-recruitment/Pods-recruitment-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSS3/AWSS3.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSS3.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-recruitment/Pods-recruitment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E7EC1E721232FF0003E5A4B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 6de6008e0e7fff237bba9937ee673f5baec10e01 2f2c91086ea178bb40ce842269ab13f0d3ba0426c5ddbc060b3756fd6ab0575a";
+		};
 		88DB00DC01F4380F27916B6C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -649,6 +807,61 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6E7EC1AB21232FF0003E5A4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E7EC1AC21232FF0003E5A4B /* ShareReflectionGroupRequest.swift in Sources */,
+				6E7EC1AD21232FF0003E5A4B /* UIButtonExtension.swift in Sources */,
+				6E7EC1AE21232FF0003E5A4B /* JobListPresenter.swift in Sources */,
+				6E7EC1AF21232FF0003E5A4B /* JobsRequest.swift in Sources */,
+				6E7EC1B021232FF0003E5A4B /* IrisApi.swift in Sources */,
+				6E7EC1B121232FF0003E5A4B /* JobDescriptionViewController.swift in Sources */,
+				6E7EC1B221232FF0003E5A4B /* LoginViewController.swift in Sources */,
+				6E7EC1B321232FF0003E5A4B /* LoginInteractor.swift in Sources */,
+				6E7EC1B421232FF0003E5A4B /* ResetPasswordRequest.swift in Sources */,
+				6E7EC1B521232FF0003E5A4B /* AuthorizationResponseExtension.swift in Sources */,
+				6E7EC1B621232FF0003E5A4B /* CreateReflectionRequest.swift in Sources */,
+				6E7EC1B721232FF0003E5A4B /* LoginResponseExtension.swift in Sources */,
+				6E7EC1B821232FF0003E5A4B /* LoginRequest.swift in Sources */,
+				6E7EC1B921232FF0003E5A4B /* Job.swift in Sources */,
+				6E7EC1BA21232FF0003E5A4B /* JobDescriptionPresenter.swift in Sources */,
+				6E7EC1BB21232FF0003E5A4B /* JobsResponseExtension.swift in Sources */,
+				6E7EC1BC21232FF0003E5A4B /* PagesRequest.swift in Sources */,
+				6E7EC1BD21232FF0003E5A4B /* RenderJobResponse.swift in Sources */,
+				6E7EC1BE21232FF0003E5A4B /* ConfirmationResponse.swift in Sources */,
+				6E7EC1BF21232FF0003E5A4B /* PageResponse.swift in Sources */,
+				6E7EC1C021232FF0003E5A4B /* OrientationUtility.swift in Sources */,
+				6E7EC1C121232FF0003E5A4B /* LoginPresenter.swift in Sources */,
+				6E7EC1C221232FF0003E5A4B /* Endpoints.swift in Sources */,
+				6E7EC1C321232FF0003E5A4B /* LeftViewTextField.swift in Sources */,
+				6E7EC1C421232FF0003E5A4B /* AuthorizationRequest.swift in Sources */,
+				6E7EC1C521232FF0003E5A4B /* CreateReflectionResponse.swift in Sources */,
+				6E7EC1C621232FF0003E5A4B /* ShareReflectionGroupResponse.swift in Sources */,
+				6E7EC1C721232FF0003E5A4B /* RecorderViewController.swift in Sources */,
+				6E7EC1C821232FF0003E5A4B /* SessionManager.swift in Sources */,
+				6E7EC1C921232FF0003E5A4B /* ParameterEncodingExtension.swift in Sources */,
+				6E7EC1CA21232FF0003E5A4B /* JobListViewController.swift in Sources */,
+				6E7EC1CB21232FF0003E5A4B /* ViewController.swift in Sources */,
+				6E7EC1CC21232FF0003E5A4B /* ForgotPasswordViewController.swift in Sources */,
+				6E7EC1CD21232FF0003E5A4B /* ConfirmationRequest.swift in Sources */,
+				6E7EC1CE21232FF0003E5A4B /* Video.swift in Sources */,
+				6E7EC1CF21232FF0003E5A4B /* JobDescriptionInteractor.swift in Sources */,
+				6E7EC1D021232FF0003E5A4B /* LoginResponse.swift in Sources */,
+				6E7EC1D121232FF0003E5A4B /* Reusable.swift in Sources */,
+				6E7EC1D221232FF0003E5A4B /* JobListCollectionCell.swift in Sources */,
+				6E7EC1D321232FF0003E5A4B /* NibExtension.swift in Sources */,
+				6E7EC1D421232FF0003E5A4B /* JobsResponse.swift in Sources */,
+				6E7EC1D521232FF0003E5A4B /* LoginErrorResponse.swift in Sources */,
+				6E7EC1D621232FF0003E5A4B /* RenderJobRequest.swift in Sources */,
+				6E7EC1D721232FF0003E5A4B /* JobListInteractor.swift in Sources */,
+				6E7EC1D821232FF0003E5A4B /* AppDelegate.swift in Sources */,
+				6E7EC1D921232FF0003E5A4B /* AWSRegionExtension.swift in Sources */,
+				6E7EC1DA21232FF0003E5A4B /* User.swift in Sources */,
+				6E7EC1DB21232FF0003E5A4B /* AuthorizationResponse.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6ECF090720D96D4E002227B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -755,6 +968,49 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6E7EC1E921232FF0003E5A4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37C524A5E9745F8A213B6C9E /* Pods-recruitment.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "recruitment copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.irisconnect.recruitmentapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6E7EC1EA21232FF0003E5A4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D398041A88BCEE9F4000EDC /* Pods-recruitment.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = RMTB2LVG92;
+				INFOPLIST_FILE = "recruitment copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.irisconnect.recruitmentapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "523754ef-e384-423f-b6c3-38de0312b69c";
+				PROVISIONING_PROFILE_SPECIFIER = "Recruitment appstore distribution";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		6ECF093120D96D51002227B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1001,6 +1257,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6E7EC1E821232FF0003E5A4B /* Build configuration list for PBXNativeTarget "recruitmentAppstore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E7EC1E921232FF0003E5A4B /* Debug */,
+				6E7EC1EA21232FF0003E5A4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6ECF090620D96D4E002227B2 /* Build configuration list for PBXProject "recruitment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
