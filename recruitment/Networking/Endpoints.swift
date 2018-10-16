@@ -11,14 +11,14 @@ import Foundation
 
 class Endpoints {
     static let mobileApiKey = "mobileehHFHIhJEVoDOmurlRvxVFlw"
-    static let host = "http://atlas-stg.irisconnect.net:3030"
+    static let host = "https://eu.atlas.irisconnect.com"
     static let login = "\(host)/v1/mobile/login"
     static let jobs = "\(host)/v1/users/me/groups"
     static let createReflection = "\(host)/v1/mobile/reflections"
     static let authorization = "\(host)/v1/mobile/primary"
     static let confirmation = "\(host)/v1/mobile/completed"
     static let resetPassword = "\(host)/v1/reset-password"
-    static let render = "https://agora-matt.irisconnect.com/render_job_page"
+    static let render = "https://europe.irisconnect.com/render_job_page"
     
     static func shareToGroup(reflectionId: Int) -> String {
         return "\(host)/v1/reflections/\(reflectionId)/shares"

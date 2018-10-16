@@ -138,13 +138,13 @@ class IrisApi {
     func authenticationHeader(user: User) -> [String: String]? {
         guard let key = user.authenticationKey else { return nil }
         return ["x-atlas-mobile-api-key": Endpoints.mobileApiKey, "Authorization": key,
-                "x-atlas-mobile-app-version": "3.7.7(825)"]
+                "x-atlas-mobile-app-version": "4.0.0(825)"]
     }
     
     func authenticationHeaderRender(user: User) -> [String: String]? {
         guard let key = user.authenticationKey else { return nil }
         return ["x-atlas-mobile-api-key": Endpoints.mobileApiKey, "auth-token": key,
-                "x-atlas-mobile-app-version": "3.7.7(825)"]
+                "x-atlas-mobile-app-version": "4.0.0(825)"]
     }
     
     func authenticationResetPassword() -> [String: String]{
