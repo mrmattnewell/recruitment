@@ -158,7 +158,7 @@ extension JobDescriptionViewController: UIScrollViewDelegate, WKNavigationDelega
     }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        guard let source = navigationAction.sourceFrame.request.url?.absoluteString else {
+        guard navigationAction.sourceFrame != nil, let source = navigationAction.sourceFrame.request.url?.absoluteString else {
             decisionHandler(.allow)
             return
         }

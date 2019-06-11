@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49913F4522B067C40076C11B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49913F4422B067C40076C11B /* WebKit.framework */; };
+		49913F4622B067CF0076C11B /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49913F4422B067C40076C11B /* WebKit.framework */; };
 		5A1114B319D3DDC561800C5A /* Pods_recruitmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D2235459A9E7603868E027 /* Pods_recruitmentUITests.framework */; };
 		6E05F31B20F61F87002D4C6B /* ConfirmationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E05F31A20F61F87002D4C6B /* ConfirmationRequest.swift */; };
 		6E05F31D20F62057002D4C6B /* ConfirmationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E05F31C20F62057002D4C6B /* ConfirmationResponse.swift */; };
@@ -143,6 +145,7 @@
 
 /* Begin PBXFileReference section */
 		16F053B10BD5C5767A4E92EC /* Pods_recruitment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_recruitment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49913F4422B067C40076C11B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		55BE6686099E0E24F2C4DB5F /* Pods-recruitmentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-recruitmentUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-recruitmentUITests/Pods-recruitmentUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6E05F31A20F61F87002D4C6B /* ConfirmationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationRequest.swift; sourceTree = "<group>"; };
 		6E05F31C20F62057002D4C6B /* ConfirmationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationResponse.swift; sourceTree = "<group>"; };
@@ -223,6 +226,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49913F4622B067CF0076C11B /* WebKit.framework in Frameworks */,
 				6E7EC1DD21232FF0003E5A4B /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,6 +235,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49913F4522B067C40076C11B /* WebKit.framework in Frameworks */,
 				6E3D8CBD20FE9D4500F2C128 /* AVFoundation.framework in Frameworks */,
 				CB40BC92991BEFF12029C459 /* Pods_recruitment.framework in Frameworks */,
 			);
@@ -271,6 +276,7 @@
 		411071F0C406ECC762132127 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49913F4422B067C40076C11B /* WebKit.framework */,
 				6E3D8CBC20FE9D4500F2C128 /* AVFoundation.framework */,
 				16F053B10BD5C5767A4E92EC /* Pods_recruitment.framework */,
 				B75D594F7420174E18EB9C92 /* Pods_recruitmentTests.framework */,
