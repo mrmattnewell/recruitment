@@ -102,7 +102,7 @@ class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImag
     func openGallery() {
         let imag = UIImagePickerController()
         imag.delegate = self
-        imag.sourceType = UIImagePickerControllerSourceType.photoLibrary;
+        imag.sourceType = UIImagePickerController.SourceType.photoLibrary;
         imag.mediaTypes = [kUTTypeMovie as String];
         self.present(imag, animated: true, completion: nil)
     }
@@ -126,9 +126,9 @@ class JobDescriptionViewController: UIViewController, JobDescriptionView, UIImag
     }
     
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         self.lblTitle.text = "Uploading video to \(job.title)"
-        if let url = info[UIImagePickerControllerMediaURL] as? URL {
+        if let url = info[UIImagePickerController.InfoKey.mediaURL] as? URL {
             presenter.gotVideo(url: url)
         }
         
@@ -158,7 +158,7 @@ extension JobDescriptionViewController: UIScrollViewDelegate, WKNavigationDelega
     }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        guard navigationAction.sourceFrame != nil, let source = navigationAction.sourceFrame.request.url?.absoluteString else {
+        guard let source = navigationAction.sourceFrame.request.url?.absoluteString else {
             decisionHandler(.allow)
             return
         }

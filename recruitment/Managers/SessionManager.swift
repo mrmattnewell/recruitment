@@ -35,8 +35,9 @@ class SessionManager {
     }
     
     func setCredentials(user: User) {
-        let account = user.username
-        let password = user.password?.data(using: String.Encoding.utf8)!
+        guard let account = user.username,
+            let password = user.password?.data(using: String.Encoding.utf8) else { return }
+        
         let query: [String: Any] = [kSecClass as String: kSecClassInternetPassword,
                                     kSecAttrAccount as String: account,
                                     kSecAttrServer as String: Endpoints.host,

@@ -10,7 +10,7 @@ target 'recruitment' do
   
   pod 'Alamofire', '~> 4.7'
   pod 'NVActivityIndicatorView'
-  pod 'AWSS3', '2.6.23'
+  pod 'AWSS3', '2.9.5'
   pod 'Fabric'
   pod 'Crashlytics'
 

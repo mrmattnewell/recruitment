@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -121,7 +121,6 @@
 		6EFBDA5120F5256800DEDE43 /* AuthorizationResponseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFBDA5020F5256800DEDE43 /* AuthorizationResponseExtension.swift */; };
 		6EFBDA5320F52D5B00DEDE43 /* AWSRegionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFBDA5220F52D5B00DEDE43 /* AWSRegionExtension.swift */; };
 		7681A117C394FE5129C20088 /* Pods_recruitmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75D594F7420174E18EB9C92 /* Pods_recruitmentTests.framework */; };
-		93526922AE30CA579794712B /* Pods_recruitment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F053B10BD5C5767A4E92EC /* Pods_recruitment.framework */; };
 		CB40BC92991BEFF12029C459 /* Pods_recruitment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F053B10BD5C5767A4E92EC /* Pods_recruitment.framework */; };
 /* End PBXBuildFile section */
 
@@ -234,7 +233,6 @@
 			files = (
 				6E3D8CBD20FE9D4500F2C128 /* AVFoundation.framework in Frameworks */,
 				CB40BC92991BEFF12029C459 /* Pods_recruitment.framework in Frameworks */,
-				93526922AE30CA579794712B /* Pods_recruitment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,7 +573,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Iris connect";
 				TargetAttributes = {
 					6ECF090A20D96D4E002227B2 = {
@@ -583,10 +581,12 @@
 					};
 					6ECF091E20D96D51002227B2 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1020;
 						TestTargetID = 6ECF090A20D96D4E002227B2;
 					};
 					6ECF092920D96D51002227B2 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1020;
 						TestTargetID = 6ECF090A20D96D4E002227B2;
 					};
 				};
@@ -723,23 +723,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-recruitment/Pods-recruitment-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
-				"${BUILT_PRODUCTS_DIR}/AWSS3/AWSS3.framework",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-recruitment/Pods-recruitment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSS3.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-recruitment/Pods-recruitment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-recruitment/Pods-recruitment-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-recruitment/Pods-recruitment-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D892BEDCB5B9818F4A815570 /* [CP] Check Pods Manifest.lock */ = {
@@ -1086,7 +1079,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3Z233GLKUM;
 				INFOPLIST_FILE = recruitment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1094,8 +1087,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.irisconnect.recruitment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				PROVISIONING_PROFILE_SPECIFIER = "recruitment dev profile";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1117,7 +1110,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6cca9ada-2b1e-4326-b6c5-7d24e821bcdc";
 				PROVISIONING_PROFILE_SPECIFIER = "Recruitment distribution";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1138,7 +1131,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.irisconnect.recruitmentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/recruitment.app/recruitment";
 			};
@@ -1160,7 +1153,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.irisconnect.recruitmentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/recruitment.app/recruitment";
 			};
@@ -1181,7 +1174,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.irisconnect.recruitmentUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = recruitment;
 			};
@@ -1202,7 +1195,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.irisconnect.recruitmentUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = recruitment;
 			};
