@@ -99,29 +99,6 @@ class RecorderViewController: UIViewController {
             }
         }
         
-        /*
-         AVCaptureDevice *audioDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeAudio];
-         
-         
-         audioIn = [[AVCaptureDeviceInput alloc] initWithDevice:audioDevice error:nil];
-         if ( [_captureSession canAddInput:audioIn] ) {
-         [_captureSession addInput:audioIn];
-         }
-         
-         audioOut = [[AVCaptureAudioDataOutput alloc] init];
-         // Put audio on its own queue to ensure that our video processing doesn't cause us to drop audio
-         NSString *audioqueue = [NSString stringWithFormat:@"%@%@", [[NSBundle mainBundle] bundleIdentifier], @".audio"];
-         dispatch_queue_t audioCaptureQueue = dispatch_queue_create( [audioqueue UTF8String], DISPATCH_QUEUE_SERIAL );
-         [audioOut setSampleBufferDelegate:self queue:audioCaptureQueue];
-         
-         
-         if ( [self.captureSession canAddOutput:audioOut] ) {
-         [self.captureSession addOutput:audioOut];
-         }
-         _audioConnection = [audioOut connectionWithMediaType:AVMediaTypeAudio];
- */
-        
-        
         prevLayer = AVCaptureVideoPreviewLayer(session: session!)
         prevLayer?.frame.size = self.viewPreview.frame.size
         prevLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
